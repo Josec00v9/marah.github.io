@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>Feliz 18 Marah</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
---bg:#050507;--text:#e8e4de;--dim:rgba(232,228,222,.28);--dimmer:rgba(232,228,222,.08);
---pink:#e8a0bf;--soft:#f2c4ce;--red:#d4606e;--rose:#c9928e;--deep:#a66b68;
---gold:#c9a96e;--sage:#a8b5a0;
---glass:rgba(255,255,255,.022);--border:rgba(255,255,255,.05);--bh:rgba(255,255,255,.08);
-}
-html{scroll-behavior:smooth;overflow-x:hidden}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-weight:300}
-::selection{background:rgba(232,160,191,.15)}
+<!DOCTYPE html><html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"> <title>Feliz 18 Marah</title> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@200;300;400;500;600;700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet"> <style> *,*::before,*::after{margin:0;padding:0;box-sizing:border-box} :root{ --bg:#050507;--text:#e8e4de;--dim:rgba(232,228,222,.28);--dimmer:rgba(232,228,222,.08); --pink:#e8a0bf;--soft:#f2c4ce;--red:#d4606e;--rose:#c9928e;--deep:#a66b68; --gold:#c9a96e;--sage:#a8b5a0;--purple:#b8a0d4;--lavender:#c4a8e0;--sun:#f0c75e; --glass:rgba(255,255,255,.022);--border:rgba(255,255,255,.05);--bh:rgba(255,255,255,.08); } html{scroll-behavior:smooth;overflow-x:hidden} body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-weight:300} ::selection{background:rgba(232,160,191,.15)}
 
-/* ═══ LOCK ═══ */
+/* LOCK SCREEN */
 .ls{position:fixed;inset:0;z-index:99999;background:#050507;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .ls.gone{animation:lsOut 2.8s cubic-bezier(.4,0,0,1) forwards}
 @keyframes lsOut{0%{opacity:1;filter:blur(0)}50%{opacity:.8;filter:blur(4px)}100%{opacity:0;filter:blur(18px);visibility:hidden;pointer-events:none}}
@@ -39,13 +22,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .ls-u{font-size:.42rem;letter-spacing:3.5px;text-transform:uppercase;color:rgba(255,255,255,.18);text-align:center}
 .ls-sep{display:flex;flex-direction:column;align-items:center;gap:5px;padding-bottom:14px}
 .ls-sep i{display:block;width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.08);font-style:normal;transition:all 1.5s}
-
-/* Frases rotativas */
 .ls-phrases{margin:30px 0 20px;height:50px;position:relative;overflow:hidden;max-width:380px;width:100%}
 .ls-phrase{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(8px);transition:all 1.2s cubic-bezier(.16,1,.3,1)}
 .ls-phrase.on{opacity:1;transform:translateY(0)}
 .ls-phrase p{font-family:'Cormorant Garamond',serif;font-size:clamp(.82rem,2vw,1rem);color:rgba(255,255,255,.25);font-style:italic;line-height:1.7;font-weight:300}
-
 .ls-status{display:inline-flex;align-items:center;gap:7px;padding:7px 16px;border-radius:50px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);margin-top:10px;transition:all 1.5s}
 .ls-status-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.12);animation:sb 2s ease-in-out infinite}
 @keyframes sb{0%,100%{opacity:.3}50%{opacity:1}}
@@ -62,23 +42,16 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .ls-reveal{position:absolute;top:clamp(40px,7vh,80px);left:50%;transform:translateX(-50%) translateY(8px);z-index:8;opacity:0;transition:all 1.2s cubic-bezier(.16,1,.3,1);pointer-events:none}
 .ls-reveal-inner{padding:10px 24px;border-radius:50px;background:rgba(232,160,191,.05);border:1px solid rgba(232,160,191,.1);backdrop-filter:blur(25px);-webkit-backdrop-filter:blur(25px)}
 .ls-reveal-inner p{font-family:'Cormorant Garamond',serif;font-size:clamp(.78rem,1.8vw,.95rem);color:rgba(255,255,255,.65);white-space:nowrap}
-
-/* Fases */
-.ls.warm .ls-chip{color:rgba(201,169,110,.35)}
-.ls.warm .ls-bar-fill{opacity:.8}
+.ls.warm .ls-chip{color:rgba(201,169,110,.35)}.ls.warm .ls-bar-fill{opacity:.8}
 .ls.heat .ls-line{width:70px;background:linear-gradient(90deg,transparent,var(--pink),transparent)}
-.ls.heat .ls-chip{color:var(--gold)}
-.ls.heat .ls-title em{filter:drop-shadow(0 0 35px rgba(232,160,191,.45))}
+.ls.heat .ls-chip{color:var(--gold)}.ls.heat .ls-title em{filter:drop-shadow(0 0 35px rgba(232,160,191,.45))}
 .ls.heat .ls-box{border-color:rgba(232,160,191,.1);background:rgba(232,160,191,.025)}
 .ls.heat .ls-n{text-shadow:0 0 22px rgba(232,160,191,.22)}
 .ls.heat .ls-sep i{background:rgba(232,160,191,.2)}
 .ls.heat .ls-status{border-color:rgba(232,160,191,.08);background:rgba(232,160,191,.02)}
-.ls.heat .ls-status-dot{background:var(--pink)}
-.ls.heat .ls-status span{color:rgba(232,160,191,.4)}
-.ls.heat .ls-dot.on{background:var(--pink)}
-.ls.heat .ls-tulip{opacity:.15}
-.ls.heat .ls-bar-fill{opacity:1;box-shadow:0 0 12px rgba(232,160,191,.35)}
-.ls.heat .ls-bar{height:3px}
+.ls.heat .ls-status-dot{background:var(--pink)}.ls.heat .ls-status span{color:rgba(232,160,191,.4)}
+.ls.heat .ls-dot.on{background:var(--pink)}.ls.heat .ls-tulip{opacity:.15}
+.ls.heat .ls-bar-fill{opacity:1;box-shadow:0 0 12px rgba(232,160,191,.35)}.ls.heat .ls-bar{height:3px}
 .ls.heat .ls-reveal{opacity:1;transform:translateX(-50%) translateY(0)}
 .ls.heat .ls-particle{animation:lF 8s ease-in-out infinite}
 @keyframes lF{0%{opacity:0;transform:translateY(0) scale(0)}15%{opacity:.5;transform:translateY(-12px) scale(1)}85%{opacity:.3;transform:translateY(-55px) scale(.7)}100%{opacity:0;transform:translateY(-75px) scale(0)}}
@@ -92,8 +65,6 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .ls.fire .ls-particle{animation:lF 3s ease-in-out infinite;background:rgba(232,160,191,.5);width:3px;height:3px}
 .ls.final .ls-title em{filter:drop-shadow(0 0 55px rgba(232,160,191,.6))}
 .ls.final .ls-n{text-shadow:0 0 45px rgba(232,160,191,.55)}
-
-/* Unlock */
 .ls-unlock-ov{position:absolute;inset:0;z-index:20;pointer-events:none;opacity:0}
 .ls.unlocking .ls-unlock-ov{animation:uRev 2.8s cubic-bezier(.4,0,0,1) forwards}
 @keyframes uRev{0%{opacity:0}30%{opacity:1;background:radial-gradient(circle at 50% 50%,rgba(232,160,191,.06),transparent 40%)}100%{background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.5),rgba(232,160,191,.1) 35%,transparent 65%)}}
@@ -108,7 +79,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .ls.unlocking #uc{animation:ucF 1.8s ease forwards .3s}
 @keyframes ucF{0%{opacity:0}30%{opacity:1}100%{opacity:1}}
 
-/* ═══ PRELOADER ═══ */
+/* PRELOADER */
 .pre{position:fixed;inset:0;background:var(--bg);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;transition:opacity 1.2s,visibility 1.2s}
 .pre.out{opacity:0;visibility:hidden;pointer-events:none}
 .pre-name{font-family:'Great Vibes',cursive;color:var(--pink);font-size:2.2rem;opacity:0;animation:fi 1s ease forwards .2s}
@@ -118,7 +89,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 @keyframes pf{to{width:100%}}
 @keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
-/* ═══ VOLUME ═══ */
+/* VOLUME */
 .vol{position:fixed;inset:0;background:var(--bg);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .8s}
 .vol.on{opacity:1;visibility:visible}.vol.out{opacity:0;visibility:hidden;pointer-events:none}
 .vol-c{text-align:center;padding:30px 22px;max-width:360px}
@@ -131,7 +102,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .sbtn{background:0;border:1px solid rgba(201,169,110,.18);color:var(--gold);padding:14px 48px;font-family:'Inter',sans-serif;font-size:.62rem;letter-spacing:6px;text-transform:uppercase;cursor:pointer;border-radius:50px;transition:all .5s}
 .sbtn:active{background:rgba(201,169,110,.08)}
 
-/* ═══ MUSIC ═══ */
+/* MUSIC */
 .mp{position:fixed;bottom:18px;left:50%;z-index:8000;display:flex;align-items:center;gap:9px;background:rgba(10,10,13,.88);backdrop-filter:blur(35px);-webkit-backdrop-filter:blur(35px);padding:6px 14px 6px 7px;border-radius:50px;border:1px solid var(--border);opacity:0;transform:translateX(-50%) translateY(18px);transition:all 1s cubic-bezier(.4,0,0,1)}
 .mp.vis{opacity:1;transform:translateX(-50%) translateY(0)}
 .mbtn{width:30px;height:30px;border-radius:50%;border:0;background:linear-gradient(135deg,var(--gold),#d4a55a);cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .2s}
@@ -147,7 +118,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 canvas#pc{position:fixed;top:0;left:0;pointer-events:none;z-index:7000}
 main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 
-/* ═══ GLOBAL ═══ */
+/* GLOBAL */
 .sec{padding:clamp(70px,12vh,140px) 20px;position:relative}
 .con{max-width:720px;margin:0 auto}
 .tag{font-size:.46rem;letter-spacing:7px;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:7px;margin-bottom:22px;opacity:.65}
@@ -161,39 +132,197 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .card{background:var(--glass);border:1px solid var(--border);border-radius:14px;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);transition:all .5s cubic-bezier(.4,0,0,1);position:relative;overflow:hidden}
 .card::before{content:'';position:absolute;top:0;left:15%;right:15%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05),transparent)}
 .card:hover{border-color:var(--bh);transform:translateY(-2px)}
+
+/* FLOATING DECORATIONS */
+.deco-float{position:fixed;pointer-events:none;z-index:1;opacity:.07}
+.deco-float svg{width:clamp(18px,3.5vw,40px)}
+.df1{top:5%;left:3%;animation:dfA 12s ease-in-out infinite}
+.df2{top:15%;right:2%;animation:dfA 16s ease-in-out infinite 2s}
+.df3{top:28%;left:1%;animation:dfA 14s ease-in-out infinite 4s}
+.df4{top:42%;right:3%;animation:dfA 18s ease-in-out infinite 1s}
+.df5{top:55%;left:4%;animation:dfA 13s ease-in-out infinite 3s}
+.df6{top:68%;right:2%;animation:dfA 15s ease-in-out infinite 5s}
+.df7{top:80%;left:2%;animation:dfA 17s ease-in-out infinite 6s}
+.df8{top:92%;right:4%;animation:dfA 11s ease-in-out infinite 7s}
+.df9{top:10%;left:15%;animation:dfA 19s ease-in-out infinite 2.5s}
+.df10{top:35%;right:8%;animation:dfA 14s ease-in-out infinite 4.5s}
+.df11{top:60%;left:8%;animation:dfA 16s ease-in-out infinite 1.5s}
+.df12{top:85%;right:6%;animation:dfA 13s ease-in-out infinite 3.5s}
+.df13{top:22%;left:6%;animation:dfA 15s ease-in-out infinite 5.5s}
+.df14{top:48%;right:5%;animation:dfA 12s ease-in-out infinite 6.5s}
+.df15{top:72%;left:10%;animation:dfA 18s ease-in-out infinite 0.5s}
+.df16{top:3%;right:12%;animation:dfA 14s ease-in-out infinite 7.5s}
+@keyframes dfA{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-18px) rotate(6deg)}}
+
+/* Lanterns floating */
+.lantern-float{position:fixed;pointer-events:none;z-index:1;opacity:0}
+.lantern-float svg{filter:drop-shadow(0 0 8px rgba(240,199,94,.15))}
+.lf1{left:8%;top:12%;animation:lanternRise 16s ease-in-out infinite}
+.lf2{left:25%;top:30%;animation:lanternRise 20s ease-in-out infinite 3s}
+.lf3{right:10%;top:15%;animation:lanternRise 18s ease-in-out infinite 6s}
+.lf4{right:22%;top:35%;animation:lanternRise 22s ease-in-out infinite 9s}
+.lf5{left:45%;top:8%;animation:lanternRise 15s ease-in-out infinite 2s}
+.lf6{right:35%;top:20%;animation:lanternRise 19s ease-in-out infinite 5s}
+.lf7{left:15%;top:50%;animation:lanternRise 17s ease-in-out infinite 8s}
+.lf8{right:15%;top:55%;animation:lanternRise 21s ease-in-out infinite 4s}
+.lf9{left:35%;top:65%;animation:lanternRise 16s ease-in-out infinite 7s}
+.lf10{right:30%;top:70%;animation:lanternRise 18s ease-in-out infinite 1s}
+@keyframes lanternRise{0%{opacity:0;transform:translateY(30px) scale(.8)}15%{opacity:.1}40%{opacity:.18;transform:translateY(-20px) scale(1)}65%{opacity:.12;transform:translateY(-40px) scale(1.05)}85%{opacity:.06}100%{opacity:0;transform:translateY(-70px) scale(.9)}}
+
+/* Sparkles */
+.deco-sparkle{position:fixed;pointer-events:none;z-index:1;opacity:.06}
+.deco-sparkle svg{width:clamp(8px,1.5vw,14px)}
+.sp1{top:8%;left:20%;animation:sparkA 4s ease-in-out infinite}
+.sp2{top:22%;right:15%;animation:sparkA 5s ease-in-out infinite 1s}
+.sp3{top:38%;left:12%;animation:sparkA 3.5s ease-in-out infinite 2s}
+.sp4{top:52%;right:20%;animation:sparkA 4.5s ease-in-out infinite .5s}
+.sp5{top:68%;left:25%;animation:sparkA 6s ease-in-out infinite 3s}
+.sp6{top:82%;right:18%;animation:sparkA 3s ease-in-out infinite 1.5s}
+.sp7{top:15%;left:35%;animation:sparkA 5.5s ease-in-out infinite 4s}
+.sp8{top:45%;right:30%;animation:sparkA 4s ease-in-out infinite 2.5s}
+@keyframes sparkA{0%,100%{opacity:.03;transform:scale(.5) rotate(0deg)}50%{opacity:.15;transform:scale(1.3) rotate(180deg)}}
+
+/* ORNAMENTS */
 .orn{display:flex;align-items:center;justify-content:center;gap:10px;padding:4px 0;opacity:.25}
 .orn i{display:block;font-style:normal}
 .orn-l{width:25px;height:1px;background:linear-gradient(to right,transparent,rgba(201,169,110,.1),transparent)}
 .orn-d{width:2.5px;height:2.5px;background:rgba(201,169,110,.08);transform:rotate(45deg)}
+.orn-rapunzel{display:flex;align-items:center;justify-content:center;padding:25px 0;gap:0}
+.orn-rapunzel svg{opacity:.08;width:clamp(120px,24vw,200px)}
 
-/* ═══ HERO ═══ */
+/* Section Rapunzel decorations */
+.sec-deco-left,.sec-deco-right{position:absolute;pointer-events:none;z-index:0;opacity:.08}
+.sec-deco-left{left:clamp(5px,2vw,25px);top:50%;transform:translateY(-50%)}
+.sec-deco-right{right:clamp(5px,2vw,25px);top:50%;transform:translateY(-50%)}
+.sec-deco-left svg,.sec-deco-right svg{width:clamp(30px,6vw,55px)}
+
+/* Section corner lanterns */
+.sec-lantern-tl,.sec-lantern-tr,.sec-lantern-bl,.sec-lantern-br{position:absolute;pointer-events:none;z-index:0;opacity:.08}
+.sec-lantern-tl{top:15px;left:15px}
+.sec-lantern-tr{top:15px;right:15px}
+.sec-lantern-bl{bottom:15px;left:15px}
+.sec-lantern-br{bottom:15px;right:15px}
+.sec-lantern-tl svg,.sec-lantern-tr svg,.sec-lantern-bl svg,.sec-lantern-br svg{width:clamp(16px,3vw,26px)}
+
+/* Section divider with Rapunzel theme */
+.rapunzel-divider{text-align:center;padding:30px 0;position:relative;overflow:hidden}
+.rapunzel-divider::before,.rapunzel-divider::after{content:'';position:absolute;top:50%;width:30%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,110,.1),transparent)}
+.rapunzel-divider::before{left:5%}
+.rapunzel-divider::after{right:5%}
+.rapunzel-divider svg{opacity:.12;width:clamp(35px,7vw,55px)}
+
+/* Golden hair trail effect */
+.hair-trail{position:absolute;pointer-events:none;z-index:0;opacity:.015}
+.hair-trail svg{width:100%;height:100%}
+.hair-trail.ht-left{left:0;top:0;width:clamp(80px,15vw,150px);height:100%}
+.hair-trail.ht-right{right:0;top:0;width:clamp(80px,15vw,150px);height:100%}
+
+/* Floating golden dust in sections */
+.golden-dust{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.golden-dust span{position:absolute;width:3px;height:3px;background:radial-gradient(circle,rgba(201,169,110,.35),transparent);border-radius:50%;animation:dustFloat 8s ease-in-out infinite}
+.golden-dust span:nth-child(1){left:10%;top:20%;animation-delay:0s;animation-duration:7s}
+.golden-dust span:nth-child(2){left:30%;top:40%;animation-delay:1.5s;animation-duration:9s}
+.golden-dust span:nth-child(3){left:50%;top:15%;animation-delay:3s;animation-duration:6s}
+.golden-dust span:nth-child(4){left:70%;top:60%;animation-delay:2s;animation-duration:8s}
+.golden-dust span:nth-child(5){left:85%;top:30%;animation-delay:4s;animation-duration:10s}
+.golden-dust span:nth-child(6){left:20%;top:70%;animation-delay:5s;animation-duration:7.5s}
+.golden-dust span:nth-child(7){left:60%;top:80%;animation-delay:1s;animation-duration:11s}
+.golden-dust span:nth-child(8){left:40%;top:50%;animation-delay:6s;animation-duration:8.5s}
+@keyframes dustFloat{0%,100%{opacity:0;transform:translateY(0) scale(0)}25%{opacity:1;transform:translateY(-10px) scale(1.5)}75%{opacity:.5;transform:translateY(-30px) scale(1)}100%{opacity:0;transform:translateY(-50px) scale(0)}}
+
+/* Rapunzel sun burst behind sections */
+.sun-burst{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:0;opacity:.04}
+.sun-burst svg{width:clamp(200px,40vw,500px)}
+
+/* HERO VIDEO BG */
+.hero-video-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-video-bg video{width:100%;height:100%;object-fit:cover;opacity:.18;filter:saturate(1.3) brightness(.6)}
+.hero-video-fade{position:absolute;bottom:0;left:0;right:0;height:45%;background:linear-gradient(to top,var(--bg) 0%,rgba(5,5,7,.95) 15%,rgba(5,5,7,.7) 35%,rgba(5,5,7,.3) 60%,transparent 100%);z-index:1}
+.hero-video-fade-top{position:absolute;top:0;left:0;right:0;height:20%;background:linear-gradient(to bottom,var(--bg),transparent);z-index:1}
+.hero-video-fade-left{position:absolute;top:0;bottom:0;left:0;width:15%;background:linear-gradient(to right,var(--bg),transparent);z-index:1}
+.hero-video-fade-right{position:absolute;top:0;bottom:0;right:0;width:15%;background:linear-gradient(to left,var(--bg),transparent);z-index:1}
+.hero-video-noise{position:absolute;inset:0;z-index:2;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");pointer-events:none}
+.hero-video-particles{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse at 50% 40%,transparent 30%,rgba(5,5,7,.4) 70%,var(--bg));pointer-events:none}
+
+/* HERO */
 .hero{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.hero-orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px)}
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;filter:blur(80px);z-index:1}
 .hero-orb.a{width:clamp(180px,38vw,380px);height:clamp(180px,38vw,380px);background:rgba(232,160,191,.022);top:30%;left:18%;animation:ob 14s ease-in-out infinite}
 .hero-orb.b{width:clamp(130px,28vw,280px);height:clamp(130px,28vw,280px);background:rgba(201,169,110,.018);bottom:22%;right:14%;animation:ob 18s ease-in-out infinite 4s}
+.hero-orb.c{width:clamp(100px,22vw,200px);height:clamp(100px,22vw,200px);background:rgba(184,160,212,.015);top:60%;left:50%;animation:ob 20s ease-in-out infinite 8s}
 @keyframes ob{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(18px,-12px) scale(1.06)}}
-.hc{text-align:center;z-index:2;padding:20px;width:100%}
-.h-tag{display:inline-flex;align-items:center;gap:5px;background:var(--glass);border:1px solid var(--border);padding:6px 13px;border-radius:50px;font-size:.45rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:38px;opacity:0;animation:fi 1s ease forwards .1s}
+
+.hero-lanterns{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden}
+.hero-lantern{position:absolute;opacity:0;animation:heroLan 10s ease-in-out infinite}
+.hero-lantern svg{filter:drop-shadow(0 0 12px rgba(240,199,94,.12))}
+.hl1{left:6%;top:12%;animation-delay:0s}.hl2{left:18%;top:22%;animation-delay:1.5s}.hl3{right:8%;top:15%;animation-delay:3s}
+.hl4{right:20%;top:28%;animation-delay:4.5s}.hl5{left:38%;top:8%;animation-delay:2s}.hl6{right:32%;top:10%;animation-delay:5.5s}
+.hl7{left:12%;top:38%;animation-delay:6s}.hl8{right:14%;top:42%;animation-delay:7s}
+.hl9{left:50%;top:5%;animation-delay:8s}.hl10{right:40%;top:35%;animation-delay:9s}
+@keyframes heroLan{0%{opacity:0;transform:translateY(25px)}20%{opacity:.18}50%{opacity:.28;transform:translateY(-35px)}80%{opacity:.14}100%{opacity:0;transform:translateY(-70px)}}
+
+.hc{text-align:center;z-index:3;padding:20px;width:100%;max-width:560px;position:relative}
+.h-tag{display:inline-flex;align-items:center;gap:5px;background:var(--glass);border:1px solid var(--border);padding:6px 13px;border-radius:50px;font-size:.45rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;opacity:0;animation:fi 1s ease forwards .1s}
 .h-tag svg{width:8px;height:8px;opacity:.3}
-.h-line-top{width:1px;height:36px;background:linear-gradient(to bottom,transparent,rgba(201,169,110,.08));margin:0 auto 28px;opacity:0;animation:fi 1s ease forwards .2s}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.2rem,3.2vw,2rem);font-weight:300;line-height:1.4;opacity:0;animation:fi 1s ease forwards .4s;letter-spacing:2px}
+.h-line-top{width:1px;height:28px;background:linear-gradient(to bottom,transparent,rgba(201,169,110,.08));margin:0 auto 16px;opacity:0;animation:fi 1s ease forwards .2s}
+
+/* Rapunzel tower hero */
+.hero-tower{opacity:0;animation:fi 1.2s ease forwards .25s;margin-bottom:12px;position:relative}
+.hero-tower svg{width:clamp(50px,9vw,75px);opacity:.08;filter:drop-shadow(0 0 15px rgba(184,160,212,.06))}
+.hero-tower-glow{position:absolute;top:0;left:50%;transform:translateX(-50%);width:60px;height:60px;background:radial-gradient(circle,rgba(240,199,94,.03),transparent 70%);border-radius:50%;animation:towerGlow 4s ease-in-out infinite}
+@keyframes towerGlow{0%,100%{opacity:.5;transform:translateX(-50%) scale(1)}50%{opacity:1;transform:translateX(-50%) scale(1.2)}}
+
+/* Crown */
+.hero-crown{opacity:0;animation:fi 1s ease forwards .3s;margin-bottom:8px}
+.hero-crown svg{width:clamp(32px,5.5vw,48px);opacity:.1;filter:drop-shadow(0 0 8px rgba(201,169,110,.08))}
+
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1rem,2.8vw,1.6rem);font-weight:300;line-height:1.4;opacity:0;animation:fi 1s ease forwards .4s;letter-spacing:2px}
 .hero .nm{font-family:'Great Vibes',cursive;color:var(--pink);display:block;font-size:clamp(2.8rem,10vw,6rem);margin-top:8px;line-height:1.1;filter:drop-shadow(0 0 35px rgba(232,160,191,.07))}
-.h-sub{font-size:.55rem;color:rgba(255,255,255,.12);font-weight:300;letter-spacing:6px;text-transform:uppercase;margin-top:22px;opacity:0;animation:fi 1s ease forwards .6s}
-.h-scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;opacity:0;animation:fi 1s ease forwards 1.2s}
+
+.h-sub{font-size:.55rem;color:rgba(255,255,255,.12);font-weight:300;letter-spacing:6px;text-transform:uppercase;margin-top:12px;opacity:0;animation:fi 1s ease forwards .6s}
+.h-age{display:inline-flex;align-items:center;justify-content:center;width:clamp(48px,9vw,65px);height:clamp(48px,9vw,65px);border:1px solid rgba(201,169,110,.06);border-radius:50%;margin:14px auto 0;opacity:0;animation:fi 1s ease forwards .7s;position:relative}
+.h-age span{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,3.2vw,1.8rem);font-weight:300;color:var(--gold);opacity:.35}
+.h-age::after{content:'';position:absolute;inset:-5px;border:1px solid rgba(232,160,191,.03);border-radius:50%}
+.h-age::before{content:'';position:absolute;inset:-10px;border:1px dashed rgba(201,169,110,.02);border-radius:50%;animation:ageRotate 20s linear infinite}
+@keyframes ageRotate{to{transform:rotate(360deg)}}
+
+.h-details{display:flex;justify-content:center;gap:clamp(12px,2.5vw,22px);margin-top:18px;flex-wrap:wrap;opacity:0;animation:fi 1s ease forwards .85s}
+.h-detail{text-align:center}
+.h-detail-icon{width:26px;height:26px;margin:0 auto 4px;border-radius:50%;background:var(--glass);border:1px solid var(--border);display:flex;align-items:center;justify-content:center}
+.h-detail-icon svg{width:10px;height:10px;opacity:.2}
+.h-detail span{font-size:.36rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.07)}
+
+/* Rapunzel quote */
+.h-rapunzel{opacity:0;animation:fi 1s ease forwards 1s;margin-top:20px;position:relative}
+.h-rapunzel-inner{background:var(--glass);border:1px solid var(--border);border-radius:14px;padding:14px 18px;max-width:340px;margin:0 auto;position:relative}
+.h-rapunzel-inner::before{content:'☀';position:absolute;top:-10px;left:50%;transform:translateX(-50%);font-size:.6rem;opacity:.08}
+.h-rapunzel p{font-family:'Cormorant Garamond',serif;font-size:clamp(.7rem,1.5vw,.85rem);font-style:italic;color:rgba(255,255,255,.12);line-height:1.8}
+.h-rapunzel .rq-attr{font-size:.38rem;letter-spacing:4px;text-transform:uppercase;color:rgba(184,160,212,.12);margin-top:6px;font-style:normal;display:flex;align-items:center;justify-content:center;gap:5px}
+.h-rapunzel .rq-attr svg{width:8px;height:8px;opacity:.15}
+
+/* Hair swirl decoration */
+.h-hair{position:absolute;pointer-events:none;opacity:.02;z-index:1}
+.h-hair.left{left:2%;top:20%}.h-hair.right{right:2%;bottom:20%}
+.h-hair svg{width:clamp(40px,8vw,80px)}
+
+.h-scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;opacity:0;animation:fi 1s ease forwards 1.2s;z-index:3}
 .h-scroll span{font-size:.4rem;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,.08)}
 .h-scroll i{width:2px;height:2px;border-radius:50%;background:var(--gold);opacity:.3;animation:sd 2s ease-in-out infinite;display:block;font-style:normal}
 @keyframes sd{0%{opacity:0;transform:translateY(-3px)}50%{opacity:.5}100%{opacity:0;transform:translateY(3px)}}
-.h-ghost{position:absolute;font-family:'Inter',sans-serif;font-size:clamp(7rem,26vw,16rem);font-weight:100;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.006);bottom:-3%;right:0;line-height:1;user-select:none;pointer-events:none}
+.h-ghost{position:absolute;font-family:'Inter',sans-serif;font-size:clamp(7rem,26vw,16rem);font-weight:100;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.006);bottom:-3%;right:0;line-height:1;user-select:none;pointer-events:none;z-index:1}
 
-/* ═══ INTRO ═══ */
-.intro{padding:clamp(90px,15vh,180px) 20px;text-align:center}
+/* INTRO */
+.intro{padding:clamp(90px,15vh,180px) 20px;text-align:center;position:relative}
 .intro h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,3vw,1.7rem);font-weight:300;line-height:2.2;max-width:500px;margin:0 auto}
 .intro h2 em{font-family:'Great Vibes',cursive;color:var(--pink);font-style:normal;font-size:1.35em}
 .intro-pills{display:flex;justify-content:center;gap:5px;flex-wrap:wrap;margin-top:25px}
-.intro-pill{padding:4px 12px;border:1px solid var(--border);border-radius:50px;font-size:.48rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.18);transition:all .4s}
+.intro-pill{padding:4px 12px;border:1px solid var(--border);border-radius:50px;font-size:.48rem;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.18);transition:all .4s;display:flex;align-items:center;gap:4px}
 .intro-pill:hover{border-color:rgba(201,169,110,.1);color:var(--gold)}
+.intro-pill svg{width:8px;height:8px;opacity:.2}
+.intro-deco{margin-top:28px;opacity:.04}
+.intro-deco svg{width:clamp(70px,14vw,120px)}
 
-/* ═══ GALLERY ═══ */
+/* GALLERY */
 .gg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;max-width:660px;margin:0 auto}
 .gi{position:relative;overflow:hidden;border-radius:10px;aspect-ratio:1;cursor:pointer;transition:all .5s cubic-bezier(.4,0,0,1)}
 .gi.tall{grid-row:span 2;aspect-ratio:auto}
@@ -205,33 +334,103 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .gi .cap{position:absolute;bottom:9px;left:10px;right:10px;color:#fff;font-size:.55rem;font-weight:300;z-index:2;opacity:0;transform:translateY(3px);transition:all .4s}
 .gi:hover .cap{opacity:.7;transform:translateY(0)}
 
-/* ═══ MARQUEE ═══ */
+/* ALBUM PREVIEW */
+.album-preview-sec{padding:clamp(50px,8vh,100px) 20px;position:relative}
+.album-preview-wrap{max-width:420px;margin:0 auto;cursor:pointer;position:relative}
+.album-preview-card{background:var(--glass);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:all .6s cubic-bezier(.16,1,.3,1);position:relative}
+.album-preview-card:hover{transform:translateY(-4px);border-color:rgba(232,160,191,.1);box-shadow:0 20px 60px rgba(232,160,191,.04)}
+.album-preview-card:active{transform:scale(.98)}
+.album-preview-photos{position:relative;height:clamp(200px,35vw,300px);overflow:hidden}
+.album-preview-grid{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;padding:2px}
+.album-preview-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s;border-radius:4px}
+.album-preview-card:hover .album-preview-grid img{transform:scale(1.03)}
+.album-preview-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,7,.9),rgba(5,5,7,.1) 50%,rgba(5,5,7,.3));z-index:2;display:flex;align-items:flex-end;padding:clamp(16px,3vw,28px)}
+.album-preview-overlay-content{width:100%}
+.album-preview-count{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.06);backdrop-filter:blur(15px);padding:5px 12px;border-radius:50px;font-size:.45rem;letter-spacing:2px;color:rgba(255,255,255,.6);margin-bottom:10px;border:1px solid rgba(255,255,255,.06)}
+.album-preview-count svg{width:10px;height:10px;opacity:.4}
+.album-preview-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.8vw,1.5rem);font-weight:300;margin-bottom:3px}
+.album-preview-sub{font-size:.6rem;color:rgba(255,255,255,.25);font-weight:300;display:flex;align-items:center;gap:4px}
+.album-preview-sub svg{width:8px;height:8px;opacity:.2}
+.album-preview-body{padding:clamp(16px,3vw,24px);display:flex;align-items:center;justify-content:space-between}
+.album-preview-info{display:flex;align-items:center;gap:10px}
+.album-preview-avatar{width:32px;height:32px;border-radius:50%;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.album-preview-avatar img{width:100%;height:100%;object-fit:cover}
+.album-preview-meta span{display:block}
+.album-preview-meta .apm-name{font-size:.65rem;font-weight:400}
+.album-preview-meta .apm-date{font-size:.42rem;color:rgba(255,255,255,.15);letter-spacing:2px}
+.album-preview-open{display:flex;align-items:center;gap:6px;padding:8px 16px;border-radius:50px;background:rgba(232,160,191,.06);border:1px solid rgba(232,160,191,.1);font-size:.48rem;letter-spacing:2px;text-transform:uppercase;color:var(--pink);transition:all .4s}
+.album-preview-card:hover .album-preview-open{background:rgba(232,160,191,.1);border-color:rgba(232,160,191,.18)}
+.album-preview-open svg{width:10px;height:10px;transition:transform .4s}
+.album-preview-card:hover .album-preview-open svg{transform:translateX(3px)}
+.album-preview-deco{position:absolute;z-index:3;pointer-events:none}
+.album-preview-deco.apd-tr{top:-8px;right:-8px;opacity:.06}
+.album-preview-deco.apd-bl{bottom:-6px;left:-6px;opacity:.05}
+.album-preview-deco svg{width:clamp(35px,7vw,55px)}
+
+/* Album Modal */
+.album-modal{position:fixed;inset:0;z-index:9600;opacity:0;visibility:hidden;transition:opacity .6s,visibility .6s;overflow:hidden}
+.album-modal.on{opacity:1;visibility:visible}
+.album-modal-bg{position:absolute;inset:0;background:rgba(3,3,5,.97);backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px)}
+.album-modal-inner{position:relative;z-index:5;height:100%;display:flex;flex-direction:column;overflow:hidden}
+.album-modal-header{flex-shrink:0;padding:clamp(14px,2.5vh,24px) clamp(16px,3vw,30px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.03)}
+.album-modal-header-left{display:flex;align-items:center;gap:12px}
+.album-modal-logo{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,rgba(232,160,191,.08),rgba(201,169,110,.06));border:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center}
+.album-modal-logo svg{width:14px;height:14px;opacity:.4}
+.album-modal-header-info h3{font-family:'Cormorant Garamond',serif;font-size:.9rem;font-weight:400;line-height:1.2}
+.album-modal-header-info span{font-size:.42rem;letter-spacing:3px;text-transform:uppercase;color:var(--dim)}
+.album-modal-close{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);cursor:pointer;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:1rem;transition:all .3s;flex-shrink:0}
+.album-modal-close:hover{background:rgba(255,255,255,.05);color:rgba(255,255,255,.7)}
+.album-modal-close:active{transform:scale(.85)}
+.album-modal-body{flex:1;overflow-y:auto;overflow-x:hidden;padding:clamp(10px,2vw,20px) clamp(16px,3vw,30px);-webkit-overflow-scrolling:touch}
+.album-modal-body::-webkit-scrollbar{width:3px}
+.album-modal-body::-webkit-scrollbar-track{background:transparent}
+.album-modal-body::-webkit-scrollbar-thumb{background:rgba(232,160,191,.1);border-radius:3px}
+.album-masonry{columns:3;column-gap:clamp(6px,1vw,12px)}
+.album-masonry-item{break-inside:avoid;margin-bottom:clamp(6px,1vw,12px);border-radius:10px;overflow:hidden;position:relative;cursor:pointer;opacity:0;transform:translateY(15px) scale(.95);transition:all .6s cubic-bezier(.16,1,.3,1);background:rgba(255,255,255,.02)}
+.album-masonry-item.show{opacity:1;transform:translateY(0) scale(1)}
+.album-masonry-item img{width:100%;display:block;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.album-masonry-item:hover img{transform:scale(1.06)}
+.album-masonry-item::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5),transparent 40%);opacity:0;transition:opacity .5s;z-index:1}
+.album-masonry-item:hover::before{opacity:1}
+.album-item-overlay{position:absolute;bottom:0;left:0;right:0;padding:clamp(8px,1.5vw,14px);z-index:3;opacity:0;transform:translateY(5px);transition:all .4s}
+.album-masonry-item:hover .album-item-overlay{opacity:1;transform:translateY(0)}
+.album-item-num{font-size:.42rem;letter-spacing:3px;color:rgba(255,255,255,.5)}
+.album-item-caption{font-family:'Cormorant Garamond',serif;font-size:.72rem;color:rgba(255,255,255,.7);margin-top:2px;font-weight:300}
+.album-modal-footer{flex-shrink:0;padding:clamp(10px,1.8vh,16px) clamp(16px,3vw,30px);border-top:1px solid rgba(255,255,255,.03);display:flex;align-items:center;justify-content:space-between}
+.album-footer-heart{display:flex;align-items:center;gap:5px;font-size:.5rem;color:rgba(255,255,255,.15)}
+.album-footer-heart svg{width:12px;height:12px;opacity:.15}
+.album-modal-footer-right{font-family:'Great Vibes',cursive;font-size:.85rem;color:rgba(232,160,191,.2)}
+
+/* MARQUEE */
 .marq{overflow:hidden;padding:18px 0}
 .marq-inner{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,5.5vw,3.5rem);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.01);white-space:nowrap;user-select:none;pointer-events:none;will-change:transform;font-weight:300}
 
-/* ═══ QUOTE ═══ */
+/* QUOTE */
 .quote{padding:clamp(90px,14vh,160px) 20px;text-align:center;position:relative}
 .quote-mark{font-family:'Playfair Display',serif;font-size:clamp(3.5rem,12vw,8rem);color:rgba(201,169,110,.012);position:absolute;top:-8px;left:50%;transform:translateX(-50%);pointer-events:none}
 .quote-text{font-family:'Cormorant Garamond',serif;font-size:clamp(.95rem,2.3vw,1.3rem);font-weight:300;font-style:italic;line-height:2.3;max-width:440px;margin:0 auto 18px;position:relative;z-index:1}
 .quote-attr{font-size:.48rem;letter-spacing:6px;text-transform:uppercase;color:var(--gold);opacity:.45}
+.quote-deco{margin-top:18px;opacity:.03}
+.quote-deco svg{width:clamp(40px,8vw,65px)}
 
-/* ═══ REASONS ═══ */
+/* REASONS */
 .reasons-grid{max-width:600px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:7px}
 .reason{padding:clamp(14px,2.2vw,22px)}
 .reason:hover{transform:translateY(-2px)}
-.reason-num{font-size:.55rem;font-weight:200;color:rgba(201,169,110,.18);letter-spacing:3px;margin-bottom:7px}
+.reason-num{font-size:.55rem;font-weight:200;color:rgba(201,169,110,.18);letter-spacing:3px;margin-bottom:7px;display:flex;align-items:center;gap:5px}
+.reason-num svg{width:7px;height:7px;opacity:.15}
 .reason-text{font-family:'Cormorant Garamond',serif;font-size:clamp(.8rem,1.9vw,.92rem);line-height:1.7;font-weight:300}
 .reason-text .hl{color:var(--pink);font-weight:400}
 .reason-text .gl{color:var(--gold);font-weight:400}
 
-/* ═══ FULL PHOTO ═══ */
+/* FULL PHOTO */
 .fp{position:relative;height:clamp(32vh,48vh,60vh);overflow:hidden}
 .fp img{width:100%;height:100%;object-fit:cover}
 .fp-ov{position:absolute;inset:0;background:linear-gradient(to top,var(--bg),rgba(5,5,7,.15) 45%,rgba(5,5,7,.3));display:flex;align-items:flex-end;justify-content:center;padding:clamp(28px,5vh,55px) 20px}
 .fp-t h3{font-family:'Great Vibes',cursive;font-size:clamp(1.6rem,4.5vw,2.8rem);color:var(--pink);margin-bottom:4px;filter:drop-shadow(0 0 15px rgba(232,160,191,.08));text-align:center}
 .fp-t p{font-size:.6rem;font-weight:300;color:rgba(255,255,255,.25);text-align:center}
 
-/* ═══ MEANINGS ═══ */
+/* MEANINGS */
 .mean-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;max-width:560px;margin:0 auto}
 .mean-card{text-align:center;padding:clamp(16px,2.2vw,24px) clamp(8px,1.5vw,14px)}
 .mean-card:hover{transform:translateY(-2px)}
@@ -239,7 +438,7 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .mean-t{font-family:'Cormorant Garamond',serif;font-size:.78rem;font-weight:400;margin-bottom:3px}
 .mean-d{font-size:.52rem;color:var(--dim);font-weight:300;line-height:1.6}
 
-/* ═══ VIDEO ═══ */
+/* VIDEO */
 .vid{text-align:center;position:relative;overflow:hidden}
 .vid-orb{position:absolute;width:clamp(180px,35vw,350px);height:clamp(180px,35vw,350px);border-radius:50%;background:radial-gradient(circle,rgba(232,160,191,.02),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
 .vid-content{position:relative;z-index:2;max-width:580px;margin:0 auto}
@@ -262,14 +461,14 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .vid-title{font-family:'Great Vibes',cursive;font-size:clamp(1.3rem,3.2vw,1.7rem);color:var(--pink);margin-bottom:5px}
 .vid-desc{font-family:'Cormorant Garamond',serif;font-size:.78rem;color:var(--dim);line-height:1.8;font-weight:300}
 
-/* ═══ VIRTUES ═══ */
+/* VIRTUES */
 .virt-list{max-width:460px;margin:0 auto;display:flex;flex-direction:column;gap:24px}
 .virt{display:flex;gap:14px;align-items:flex-start}
 .virt-n{font-size:.55rem;font-weight:200;color:rgba(201,169,110,.12);min-width:26px;text-align:right;padding-top:6px;letter-spacing:2px}
 .virt-t{font-family:'Cormorant Garamond',serif;font-size:clamp(.85rem,2.1vw,1rem);line-height:1.9;font-weight:300}
 .virt-t .hl{color:var(--pink);font-weight:400}
 
-/* ═══ TIMELINE ═══ */
+/* TIMELINE */
 .tl{max-width:420px;margin:0 auto;position:relative}
 .tl::before{content:'';position:absolute;left:12px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(201,169,110,.06),transparent)}
 .tli{padding-left:38px;margin-bottom:36px;position:relative}
@@ -281,7 +480,7 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .tl-img{margin-top:7px;border-radius:8px;overflow:hidden}
 .tl-img img{width:100%;display:block}
 
-/* ═══ STRIP ═══ */
+/* STRIP */
 .strip{padding:30px 0;overflow:hidden}
 .strip-inner{display:flex;gap:4px;animation:scr 50s linear infinite;width:max-content}
 .strip-inner:hover{animation-play-state:paused}
@@ -289,13 +488,15 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .strip-item{width:clamp(90px,14vw,150px);height:clamp(120px,20vw,205px);border-radius:8px;overflow:hidden;flex-shrink:0}
 .strip-item img{width:100%;height:100%;object-fit:cover}
 
-/* ═══ LOVE ═══ */
+/* LOVE */
 .love{text-align:center}
 .love-big{font-family:'Great Vibes',cursive;font-size:clamp(1.9rem,6.5vw,4rem);background:linear-gradient(135deg,var(--pink),var(--soft),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200% 200%;animation:gm 6s ease infinite;line-height:1.3;margin-bottom:14px}
 @keyframes gm{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
 .love-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(.82rem,2vw,1rem);color:var(--dim);font-weight:300;font-style:italic;line-height:1.9;max-width:340px;margin:0 auto}
+.love-deco{margin-top:20px;display:flex;justify-content:center;gap:15px;opacity:.04}
+.love-deco svg{width:clamp(18px,3.5vw,30px)}
 
-/* ═══ DISTANCE ═══ */
+/* DISTANCE */
 .dist-row{display:flex;align-items:center;justify-content:center;gap:clamp(10px,3vw,22px);margin:30px auto;max-width:440px;flex-wrap:wrap}
 .dist-place{text-align:center;flex-shrink:0}
 .dist-flag{font-size:1.6rem;margin-bottom:3px;display:block}
@@ -311,7 +512,7 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .dist-badge{display:inline-flex;align-items:center;gap:7px;background:var(--glass);border:1px solid var(--border);padding:9px 18px;border-radius:50px;margin-top:22px;font-size:.55rem;color:var(--gold)}
 .dist-badge strong{font-size:1.1rem;font-weight:200;color:var(--pink)}
 
-/* ═══ FUTURE ═══ */
+/* FUTURE */
 .fut-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;max-width:460px;margin:0 auto}
 .fut-card{text-align:center;padding:clamp(14px,2.2vw,24px)}
 .fut-card:hover{transform:translateY(-2px)}
@@ -319,7 +520,7 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .fut-t{font-family:'Cormorant Garamond',serif;font-size:.82rem;font-weight:400;margin-bottom:3px}
 .fut-d{font-size:.55rem;color:var(--dim);font-weight:300;line-height:1.6}
 
-/* ═══ PROMISES ═══ */
+/* PROMISES */
 .prom-list{max-width:400px;margin:0 auto;display:flex;flex-direction:column;gap:7px}
 .prom{display:flex;align-items:center;gap:11px;text-align:left;padding:12px 14px}
 .prom:hover{transform:translateX(2px)}
@@ -327,15 +528,19 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .prom-icon svg{width:11px;height:11px;opacity:.35}
 .prom p{font-family:'Cormorant Garamond',serif;font-size:.82rem;line-height:1.7;font-weight:300}
 
-/* ═══ COUNTDOWN ═══ */
+/* COUNTDOWN */
 .cd-wrap{display:inline-flex;gap:clamp(5px,2.2vw,12px);padding:clamp(16px,3vw,28px) clamp(20px,3.5vw,38px);margin:25px 0;flex-wrap:wrap;justify-content:center}
 .cd-num{font-family:'Inter',sans-serif;font-size:clamp(1.5rem,4.2vw,2.2rem);font-weight:200;color:var(--text);line-height:1}
 .cd-unit{font-size:.4rem;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.08);margin-top:4px}
 .cd-sep{font-weight:100;color:rgba(255,255,255,.03);align-self:flex-start;margin-top:4px}
 .cd-note{font-size:.68rem;color:var(--dim);font-weight:300;font-style:italic;max-width:280px;margin:0 auto;line-height:1.8}
 
-/* ═══ LETTER — REAL PAPER LOOK ═══ */
-.env-wrap{text-align:center;max-width:360px;width:100%;margin:0 auto}
+/* LETTER SECTION */
+.letter-sec{position:relative;overflow:hidden}
+.letter-sec .lantern-canvas-wrap{position:absolute;inset:0;pointer-events:none;z-index:0;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 15%,black 85%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0%,black 15%,black 85%,transparent 100%)}
+#letterLanternCanvas{width:100%;height:100%}
+
+.env-wrap{text-align:center;max-width:360px;width:100%;margin:0 auto;position:relative;z-index:2}
 .env{width:100%;max-width:280px;margin:0 auto;cursor:pointer}
 .env-box{padding:38px 20px;animation:ef 7s ease-in-out infinite}
 @keyframes ef{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
@@ -346,19 +551,16 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .env-label{font-family:'Great Vibes',cursive;font-size:1.05rem;color:var(--text);margin-top:28px}
 .env-hint{font-size:.42rem;letter-spacing:5px;text-transform:uppercase;color:rgba(255,255,255,.08);margin-top:14px}
 
-/* ═══ LETTER MODAL — REAL PAPER ═══ */
+/* LETTER MODAL */
 .lm{position:fixed;inset:0;z-index:9500;display:flex;align-items:flex-start;justify-content:center;opacity:0;visibility:hidden;transition:opacity .6s,visibility .6s;overflow-y:auto;padding:12px;-webkit-overflow-scrolling:touch}
 .lm.on{opacity:1;visibility:visible}
 .lm-bg{position:fixed;inset:0;background:rgba(0,0,0,.9);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
-.lm-paper{position:relative;z-index:2;background:#faf8f5;color:#2a2420;max-width:460px;width:100%;border-radius:4px;padding:clamp(28px,5vw,50px) clamp(22px,4.5vw,40px);margin:24px auto;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(0,0,0,.05);transform:translateY(25px) scale(.95);transition:transform .8s cubic-bezier(.16,1,.3,1);font-family:'Cormorant Garamond',serif;line-height:2}
+/* Letter modal lantern canvas */
+#letterModalCanvas{position:fixed;inset:0;z-index:1;pointer-events:none;-webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,black 40%,transparent 100%);mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,black 40%,transparent 100%)}
+.lm-paper{position:relative;z-index:2;background:#faf8f5;color:#2a2420;max-width:460px;width:100%;border-radius:4px;padding:clamp(28px,5vw,50px) clamp(22px,4.5vw,40px);margin:24px auto;box-shadow:0 30px 80px rgba(0,0,0,.6);transform:translateY(25px) scale(.95);transition:transform .8s cubic-bezier(.16,1,.3,1);font-family:'Cormorant Garamond',serif;line-height:2}
 .lm.on .lm-paper{transform:translateY(0) scale(1)}
-/* Paper texture */
-.lm-paper::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,0,0,.01),transparent 30%,rgba(0,0,0,.015));pointer-events:none;border-radius:4px}
-/* Fold line */
-.lm-paper::after{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 5%,rgba(0,0,0,.03) 15%,rgba(0,0,0,.04) 50%,rgba(0,0,0,.03) 85%,transparent 95%);pointer-events:none}
-/* Tape effect */
 .lm-tape{position:absolute;top:-8px;left:50%;transform:translateX(-50%) rotate(-1deg);width:60px;height:22px;background:rgba(201,169,110,.12);border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
-.lm-close{position:absolute;top:12px;right:12px;width:28px;height:28px;border:1px solid rgba(0,0,0,.08);border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#8a7e72;font-size:.8rem;z-index:5;transition:all .3s;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.lm-close{position:absolute;top:12px;right:12px;width:28px;height:28px;border:1px solid rgba(0,0,0,.08);border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#8a7e72;font-size:.8rem;z-index:5;transition:all .3s}
 .lm-close:hover{background:rgba(255,255,255,.8)}.lm-close:active{transform:scale(.85)}
 .lm-head{text-align:center;margin-bottom:24px;padding-top:10px}
 .lm-head h3{font-family:'Great Vibes',cursive;font-size:clamp(1.5rem,4vw,2.1rem);color:#8a5a6e}
@@ -379,18 +581,31 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .lm-sign .hearts{display:flex;justify-content:center;gap:3px;margin-top:8px}
 .lm-sign .hearts svg{width:9px;height:9px;fill:#c47a95;opacity:.2}
 
-/* ═══ LIGHTBOX ═══ */
+/* LIGHTBOX */
 .lbox{position:fixed;inset:0;z-index:9800;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .4s;cursor:pointer;padding:15px}
 .lbox.on{opacity:1;visibility:visible}
 .lbox img{max-width:94%;max-height:85vh;object-fit:contain;border-radius:6px}
 .lbox-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border:1px solid rgba(255,255,255,.06);border-radius:50%;background:var(--glass);color:#fff;font-size:.8rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
 
-.ft{text-align:center;padding:45px 20px}
+.ft{text-align:center;padding:45px 20px;position:relative}
 .ft p{font-size:.4rem;letter-spacing:7px;text-transform:uppercase;color:rgba(255,255,255,.05)}
+.ft-deco{margin-bottom:12px;opacity:.03}
+.ft-deco svg{width:clamp(40px,8vw,60px)}
+
+/* Rapunzel quote badges scattered */
+.rapunzel-badge{position:absolute;pointer-events:none;z-index:0;background:rgba(184,160,212,.04);border:1px solid rgba(184,160,212,.07);border-radius:50px;padding:5px 12px;font-family:'Cormorant Garamond',serif;font-size:.55rem;color:rgba(184,160,212,.18);font-style:italic;white-space:nowrap}
+
+/* Pascal peek */
+.pascal-peek{position:absolute;pointer-events:none;z-index:0;opacity:.09}
+.pascal-peek svg{width:clamp(35px,6vw,55px)}
+
+/* Magical glow effect on section headers */
+.sh h2::after{content:'';display:block;width:50px;height:1px;background:linear-gradient(90deg,transparent,rgba(240,199,94,.12),transparent);margin:8px auto 0}
 
 @media(max-width:700px){
 .mp{left:10px;right:10px;transform:none;bottom:10px;justify-content:center}.mp.vis{transform:none}
 .gg{grid-template-columns:1fr 1fr;gap:3px}.gi.tall{grid-row:auto;aspect-ratio:1}
+.album-masonry{columns:2;column-gap:5px}
 .reasons-grid{grid-template-columns:1fr;gap:5px}
 .mean-grid{grid-template-columns:1fr 1fr;gap:5px}
 .fut-grid{grid-template-columns:1fr 1fr;gap:5px}
@@ -401,122 +616,479 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 .ls-cd{gap:4px}.ls-box{min-width:62px;padding:14px 10px}.ls-n{font-size:1.6rem!important}.ls-u{font-size:.38rem;letter-spacing:3px}
 .vid-play{width:54px;height:54px}.vid-play svg{width:22px;height:22px}
 .lm-paper{padding:22px 18px;margin:12px auto}
+.h-details{gap:10px}
+.sec-deco-left,.sec-deco-right{display:none}
 }
 @media(max-width:400px){
 .ls-box{min-width:56px;padding:12px 8px}.ls-n{font-size:1.4rem!important}
 .hero .nm{font-size:2.4rem}
 .mean-grid,.fut-grid{grid-template-columns:1fr}
+.album-masonry{columns:2;column-gap:4px}
+.album-preview-grid{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr 1fr}
 }
 </style>
-</head>
-<body>
 
-<div class="ls" id="ls">
-<canvas id="lc"></canvas>
-<div class="ls-photos"><div class="ls-ph on"><img src="foto1.jpeg"></div><div class="ls-ph"><img src="foto2.jpeg"></div><div class="ls-ph"><img src="foto3.jpeg"></div><div class="ls-ph"><img src="foto4.jpeg"></div><div class="ls-ph"><img src="foto5.jpeg"></div><div class="ls-ph"><img src="foto6.jpeg"></div></div>
-<div class="ls-ov"></div><div class="ls-noise"></div>
-<div class="ls-big" id="lsBig">10</div>
-<div class="ls-reveal"><div class="ls-reveal-inner"><p id="lsRT">✦ Tu sorpresa se desbloquea ya...</p></div></div>
-<div class="ls-particle" style="left:12%;bottom:28%"></div><div class="ls-particle" style="left:32%;bottom:20%;animation-delay:1.2s"></div><div class="ls-particle" style="left:52%;bottom:34%;animation-delay:2.4s"></div><div class="ls-particle" style="left:72%;bottom:18%;animation-delay:3.6s"></div><div class="ls-particle" style="left:88%;bottom:32%;animation-delay:4.8s"></div><div class="ls-particle" style="left:42%;bottom:42%;animation-delay:6s"></div>
-<div class="ls-tulip tl"><svg viewBox="0 0 14 32" fill="none"><path d="M7 12C7 12 3 5 3 2.5C3 .8 4.5 0 7 0C9.5 0 11 .8 11 2.5C11 5 7 12 7 12Z" fill="#E8A0BF" opacity=".5"/><rect x="6.3" y="11" width="1.4" height="20" rx=".7" fill="#A8B5A0" opacity=".4"/></svg></div>
-<div class="ls-tulip tr"><svg viewBox="0 0 14 32" fill="none"><path d="M7 12C7 12 3 5 3 2.5C3 .8 4.5 0 7 0C9.5 0 11 .8 11 2.5C11 5 7 12 7 12Z" fill="#F2C4CE" opacity=".4"/><rect x="6.3" y="11" width="1.4" height="20" rx=".7" fill="#A8B5A0" opacity=".4"/></svg></div>
-<div class="ls-unlock-ov"></div><canvas id="uc"></canvas>
-<div class="ls-unlock-text"><h2>Feliz Cumpleaños</h2><p>Tu sorpresa está lista, mi vida ✦</p></div>
-<div class="ls-c">
-<div class="ls-line"></div>
-<p class="ls-chip">18 · Febrero · 2026</p>
-<h1 class="ls-title">Algo especial para <em>Marah</em></h1>
-<p class="ls-sub">Se desbloquea automáticamente</p>
-<div class="ls-cd">
-<div class="ls-box"><span class="ls-n" id="lD">--</span><span class="ls-u">Días</span></div>
-<div class="ls-sep"><i></i><i></i></div>
-<div class="ls-box"><span class="ls-n" id="lH">--</span><span class="ls-u">Horas</span></div>
-<div class="ls-sep"><i></i><i></i></div>
-<div class="ls-box"><span class="ls-n" id="lM">--</span><span class="ls-u">Min</span></div>
-<div class="ls-sep"><i></i><i></i></div>
-<div class="ls-box"><span class="ls-n" id="lS">--</span><span class="ls-u">Seg</span></div>
-</div>
-<div class="ls-phrases" id="lsPh">
-<div class="ls-phrase on"><p>"Eres lo mejor que me ha pasado en la vida."</p></div>
-<div class="ls-phrase"><p>"Contigo los kilómetros no significan nada."</p></div>
-<div class="ls-phrase"><p>"Mi persona favorita de todo el universo."</p></div>
-<div class="ls-phrase"><p>"Te elegiría en esta y en mil vidas más."</p></div>
-<div class="ls-phrase"><p>"Cada día te quiero más, Marah."</p></div>
-<div class="ls-phrase"><p>"Eres perfecta, no lo olvides nunca."</p></div>
-<div class="ls-phrase"><p>"Pronto estaremos juntos, te lo prometo."</p></div>
-<div class="ls-phrase"><p>"Mi tulipán favorito del mundo entero."</p></div>
-</div>
-<div class="ls-status"><div class="ls-status-dot"></div><span id="lsSt">Esperando...</span></div>
-<div class="ls-dots" id="lsDots"><div class="ls-dot on"></div><div class="ls-dot"></div><div class="ls-dot"></div><div class="ls-dot"></div><div class="ls-dot"></div><div class="ls-dot"></div></div>
-</div>
-<div class="ls-bar"><div class="ls-bar-fill" id="lsBar"></div></div>
-</div>
+</head> <body>
+
+<!-- FLOATING DECORATIONS -->
+<!-- Tulips -->
+<div class="deco-float df1"><svg viewBox="0 0 24 48" fill="none"><path d="M12 18C12 18 6 8 6 4C6 1.5 8.5 0 12 0C15.5 0 18 1.5 18 4C18 8 12 18 12 18Z" fill="#E8A0BF" opacity=".5"/><rect x="11" y="17" width="2" height="28" rx="1" fill="#A8B5A0" opacity=".4"/><ellipse cx="8" cy="32" rx="4" ry="2" fill="#A8B5A0" opacity=".12" transform="rotate(-20 8 32)"/></svg></div>
+<!-- Rapunzel tower -->
+<div class="deco-float df2"><svg viewBox="0 0 40 65" fill="none"><rect x="12" y="22" width="16" height="40" rx="1" fill="#B8A0D4" opacity=".15"/><path d="M8 22L20 6L32 22Z" fill="#C4A8E0" opacity=".1"/><rect x="17" y="30" width="6" height="8" rx="1" fill="#050507" opacity=".2"/><circle cx="20" cy="4" r="2.5" fill="#C9A96E" opacity=".2"/><path d="M20 6C20 6 6 18 4 35" stroke="#C9A96E" stroke-width=".5" opacity=".12" fill="none"/><path d="M20 6C20 6 34 18 36 35" stroke="#C9A96E" stroke-width=".5" opacity=".12" fill="none"/></svg></div>
+<!-- Chameleon (Pascal) -->
+<div class="deco-float df3"><svg viewBox="0 0 40 28" fill="none"><ellipse cx="20" cy="16" rx="10" ry="8" fill="#A8B5A0" opacity=".2"/><circle cx="26" cy="13" r="3" fill="#A8B5A0" opacity=".15"/><circle cx="27" cy="12.5" r="1" fill="#050507" opacity=".15"/><path d="M10 16Q5 16 3 14" stroke="#A8B5A0" stroke-width="1.5" opacity=".15" fill="none" stroke-linecap="round"/><path d="M14 22Q16 26 20 26Q24 26 24 22" stroke="#A8B5A0" stroke-width="1" opacity=".1" fill="none"/></svg></div>
+<!-- Frying pan -->
+<div class="deco-float df4"><svg viewBox="0 0 36 36" fill="none"><circle cx="16" cy="18" r="10" fill="none" stroke="#C9A96E" stroke-width="1" opacity=".2"/><circle cx="16" cy="18" r="8" fill="#C9A96E" opacity=".04"/><rect x="26" y="16" width="10" height="3" rx="1.5" fill="#C9A96E" opacity=".15"/></svg></div>
+<!-- Sun flower -->
+<div class="deco-float df5"><svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="5" fill="#F0C75E" opacity=".15"/><g opacity=".12"><ellipse cx="15" cy="5" rx="2.5" ry="5" fill="#F0C75E"/><ellipse cx="15" cy="25" rx="2.5" ry="5" fill="#F0C75E"/><ellipse cx="5" cy="15" rx="5" ry="2.5" fill="#F0C75E"/><ellipse cx="25" cy="15" rx="5" ry="2.5" fill="#F0C75E"/><ellipse cx="8" cy="8" rx="2.5" ry="5" fill="#F0C75E" transform="rotate(45 8 8)"/><ellipse cx="22" cy="22" rx="2.5" ry="5" fill="#F0C75E" transform="rotate(45 22 22)"/><ellipse cx="22" cy="8" rx="2.5" ry="5" fill="#F0C75E" transform="rotate(-45 22 8)"/><ellipse cx="8" cy="22" rx="2.5" ry="5" fill="#F0C75E" transform="rotate(-45 8 22)"/></g></svg></div>
+<!-- Tulip 2 -->
+<div class="deco-float df6"><svg viewBox="0 0 24 48" fill="none"><path d="M12 18C12 18 6 8 6 4C6 1.5 8.5 0 12 0C15.5 0 18 1.5 18 4C18 8 12 18 12 18Z" fill="#F2C4CE" opacity=".4"/><rect x="11" y="17" width="2" height="28" rx="1" fill="#A8B5A0" opacity=".35"/></svg></div>
+<!-- Heart -->
+<div class="deco-float df7"><svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+<!-- Crown -->
+<div class="deco-float df8"><svg viewBox="0 0 50 35" fill="none"><path d="M5 30L8 10L18 20L25 4L32 20L42 10L45 30Z" stroke="#C9A96E" stroke-width=".8" fill="none" opacity=".3"/><circle cx="25" cy="4" r="2" fill="#C9A96E" opacity=".15"/><circle cx="8" cy="10" r="1.5" fill="#E8A0BF" opacity=".1"/><circle cx="42" cy="10" r="1.5" fill="#E8A0BF" opacity=".1"/></svg></div>
+<!-- Rapunzel hair swirl -->
+<div class="deco-float df9"><svg viewBox="0 0 50 50" fill="none"><path d="M10 25C10 25 15 10 25 10C35 10 35 25 25 25C15 25 15 40 25 40C35 40 40 25 40 25" stroke="#C9A96E" stroke-width=".6" opacity=".15" fill="none"/></svg></div>
+<!-- Tower 2 -->
+<div class="deco-float df10"><svg viewBox="0 0 40 65" fill="none"><rect x="12" y="22" width="16" height="40" rx="1" fill="#E8A0BF" opacity=".08"/><path d="M8 22L20 6L32 22Z" fill="#F2C4CE" opacity=".06"/><rect x="17" y="32" width="6" height="7" rx="1" fill="#050507" opacity=".12"/><path d="M20 6Q30 14 28 35" stroke="#C9A96E" stroke-width=".4" opacity=".1" fill="none"/></svg></div>
+<!-- Chameleon 2 -->
+<div class="deco-float df11"><svg viewBox="0 0 40 28" fill="none"><ellipse cx="20" cy="16" rx="10" ry="8" fill="#A8B5A0" opacity=".15"/><circle cx="26" cy="13" r="3" fill="#A8B5A0" opacity=".12"/><circle cx="27" cy="12.5" r="1" fill="#050507" opacity=".1"/><path d="M10 16Q5 16 3 14" stroke="#A8B5A0" stroke-width="1.5" opacity=".1" fill="none" stroke-linecap="round"/></svg></div>
+<!-- Sun -->
+<div class="deco-float df12"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#F0C75E" opacity=".12"/><g stroke="#F0C75E" stroke-width=".5" opacity=".1"><line x1="12" y1="1" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="1" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="23" y2="12"/><line x1="4" y1="4" x2="7" y2="7"/><line x1="17" y1="17" x2="20" y2="20"/><line x1="4" y1="20" x2="7" y2="17"/><line x1="17" y1="7" x2="20" y2="4"/></g></svg></div>
+<!-- Sparkle star -->
+<div class="deco-float df13"><svg viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z" opacity=".3"/></svg></div>
+<!-- Tulip 3 -->
+<div class="deco-float df14"><svg viewBox="0 0 24 48" fill="none"><path d="M12 18C12 18 6 8 6 4C6 1.5 8.5 0 12 0C15.5 0 18 1.5 18 4C18 8 12 18 12 18Z" fill="#B8A0D4" opacity=".3"/><rect x="11" y="17" width="2" height="28" rx="1" fill="#A8B5A0" opacity=".3"/></svg></div>
+<!-- Frying pan 2 -->
+<div class="deco-float df15"><svg viewBox="0 0 36 36" fill="none"><circle cx="16" cy="18" r="10" fill="none" stroke="#C9928E" stroke-width=".8" opacity=".15"/><rect x="26" y="16" width="9" height="3" rx="1.5" fill="#C9928E" opacity=".1"/></svg></div>
+<!-- Hair flower -->
+<div class="deco-float df16"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" fill="#E8A0BF" opacity=".12"/><ellipse cx="12" cy="5" rx="3" ry="4" fill="#F2C4CE" opacity=".08"/><ellipse cx="12" cy="19" rx="3" ry="4" fill="#F2C4CE" opacity=".08"/><ellipse cx="5" cy="12" rx="4" ry="3" fill="#F2C4CE" opacity=".08"/><ellipse cx="19" cy="12" rx="4" ry="3" fill="#F2C4CE" opacity=".08"/></svg></div>
+
+<!-- FLOATING LANTERNS -->
+<div class="lantern-float lf1"><svg width="18" height="24" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".5"/><rect x="10" y="0" width="4" height="6" rx="2" fill="#C9A96E" opacity=".25"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".2"/><line x1="12" y1="20" x2="12" y2="30" stroke="#C9A96E" stroke-width=".4" opacity=".15"/></svg></div>
+<div class="lantern-float lf2"><svg width="14" height="20" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#E8A0BF" opacity=".35"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".15"/></svg></div>
+<div class="lantern-float lf3"><svg width="16" height="22" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".45"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".18"/></svg></div>
+<div class="lantern-float lf4"><svg width="12" height="18" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#B8A0D4" opacity=".3"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".12"/></svg></div>
+<div class="lantern-float lf5"><svg width="15" height="21" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".4"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".15"/></svg></div>
+<div class="lantern-float lf6"><svg width="13" height="19" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#F2C4CE" opacity=".3"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".1"/></svg></div>
+<div class="lantern-float lf7"><svg width="11" height="16" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".3"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".1"/></svg></div>
+<div class="lantern-float lf8"><svg width="14" height="20" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#E8A0BF" opacity=".25"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".1"/></svg></div>
+<div class="lantern-float lf9"><svg width="16" height="22" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".35"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".12"/></svg></div>
+<div class="lantern-float lf10"><svg width="12" height="18" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#B8A0D4" opacity=".25"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+
+<!-- SPARKLES -->
+<div class="deco-sparkle sp1"><svg viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z"/></svg></div>
+<div class="deco-sparkle sp2"><svg viewBox="0 0 24 24" fill="#E8A0BF"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z"/></svg></div>
+<div class="deco-sparkle sp3"><svg viewBox="0 0 24 24" fill="#B8A0D4"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z"/></svg></div>
+<div class="deco-sparkle sp4"><svg viewBox="0 0 24 24" fill="#F0C75E"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z"/></svg></div>
+<div class="deco-sparkle sp5"><svg viewBox="0 0 24 24" fill="#A8B5A0"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z"/></svg></div>
+<div class="deco-sparkle sp6"><svg viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z"/></svg></div>
+<div class="deco-sparkle sp7"><svg viewBox="0 0 24 24" fill="#D4606E"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z"/></svg></div>
+<div class="deco-sparkle sp8"><svg viewBox="0 0 24 24" fill="#E8A0BF"><path d="M12 0L14 10L24 12L14 14L12 24L10 14L0 12L10 10Z"/></svg></div>
+
+<!-- LOCK SCREEN -->
+<div class="ls" id="ls"><canvas id="lc"></canvas><div class="ls-photos"><div class="ls-ph on"><img src="foto1.jpeg"></div><div class="ls-ph"><img src="foto2.jpeg"></div><div class="ls-ph"><img src="foto3.jpeg"></div><div class="ls-ph"><img src="foto4.jpeg"></div><div class="ls-ph"><img src="foto5.jpeg"></div><div class="ls-ph"><img src="foto6.jpeg"></div><div class="ls-ph"><img src="foto7.jpeg"></div><div class="ls-ph"><img src="foto8.jpeg"></div><div class="ls-ph"><img src="foto9.jpeg"></div><div class="ls-ph"><img src="foto10.jpeg"></div><div class="ls-ph"><img src="foto11.jpeg"></div><div class="ls-ph"><img src="foto12.jpeg"></div><div class="ls-ph"><img src="foto13.jpeg"></div><div class="ls-ph"><img src="foto14.jpeg"></div><div class="ls-ph"><img src="foto15.jpeg"></div><div class="ls-ph"><img src="foto16.jpeg"></div><div class="ls-ph"><img src="foto17.jpeg"></div><div class="ls-ph"><img src="foto18.jpeg"></div><div class="ls-ph"><img src="foto19.jpeg"></div><div class="ls-ph"><img src="foto20.jpeg"></div><div class="ls-ph"><img src="foto21.jpeg"></div><div class="ls-ph"><img src="foto22.jpeg"></div><div class="ls-ph"><img src="foto23.jpeg"></div><div class="ls-ph"><img src="foto24.jpeg"></div><div class="ls-ph"><img src="foto25.jpeg"></div><div class="ls-ph"><img src="foto26.jpeg"></div><div class="ls-ph"><img src="foto28.jpeg"></div><div class="ls-ph"><img src="foto29.jpeg"></div><div class="ls-ph"><img src="foto30.jpeg"></div></div><div class="ls-ov"></div><div class="ls-noise"></div><div class="ls-big" id="lsBig">10</div><div class="ls-reveal"><div class="ls-reveal-inner"><p id="lsRT">✦ Tu sorpresa se desbloquea ya...</p></div></div><div class="ls-particle" style="left:12%;bottom:28%"></div><div class="ls-particle" style="left:32%;bottom:20%;animation-delay:1.2s"></div><div class="ls-particle" style="left:52%;bottom:34%;animation-delay:2.4s"></div><div class="ls-particle" style="left:72%;bottom:18%;animation-delay:3.6s"></div><div class="ls-particle" style="left:88%;bottom:32%;animation-delay:4.8s"></div><div class="ls-particle" style="left:42%;bottom:42%;animation-delay:6s"></div><div class="ls-tulip tl"><svg viewBox="0 0 14 32" fill="none"><path d="M7 12C7 12 3 5 3 2.5C3 .8 4.5 0 7 0C9.5 0 11 .8 11 2.5C11 5 7 12 7 12Z" fill="#E8A0BF" opacity=".5"/><rect x="6.3" y="11" width="1.4" height="20" rx=".7" fill="#A8B5A0" opacity=".4"/></svg></div><div class="ls-tulip tr"><svg viewBox="0 0 14 32" fill="none"><path d="M7 12C7 12 3 5 3 2.5C3 .8 4.5 0 7 0C9.5 0 11 .8 11 2.5C11 5 7 12 7 12Z" fill="#F2C4CE" opacity=".4"/><rect x="6.3" y="11" width="1.4" height="20" rx=".7" fill="#A8B5A0" opacity=".4"/></svg></div><div class="ls-unlock-ov"></div><canvas id="uc"></canvas><div class="ls-unlock-text"><h2>Feliz Cumpleaños</h2><p>Tu sorpresa está lista, mi vida ✦</p></div><div class="ls-c"><div class="ls-line"></div><p class="ls-chip">18 · Febrero · 2026</p><h1 class="ls-title">Algo especial para <em>Marah</em></h1><p class="ls-sub">Se desbloquea automáticamente</p><div class="ls-cd"><div class="ls-box"><span class="ls-n" id="lD">--</span><span class="ls-u">Días</span></div><div class="ls-sep"><i></i><i></i></div><div class="ls-box"><span class="ls-n" id="lH">--</span><span class="ls-u">Horas</span></div><div class="ls-sep"><i></i><i></i></div><div class="ls-box"><span class="ls-n" id="lM">--</span><span class="ls-u">Min</span></div><div class="ls-sep"><i></i><i></i></div><div class="ls-box"><span class="ls-n" id="lS">--</span><span class="ls-u">Seg</span></div></div><div class="ls-phrases" id="lsPh"><div class="ls-phrase on"><p>"Eres lo mejor que me ha pasado en la vida."</p></div><div class="ls-phrase"><p>"Contigo los kilómetros no significan nada."</p></div><div class="ls-phrase"><p>"Mi persona favorita de todo el universo."</p></div><div class="ls-phrase"><p>"Te elegiría en esta y en mil vidas más."</p></div><div class="ls-phrase"><p>"Cada día te quiero más, Marah."</p></div><div class="ls-phrase"><p>"Al fin veo la luz..." — Rapunzel ☀</p></div><div class="ls-phrase"><p>"Pronto estaremos juntos, te lo prometo."</p></div><div class="ls-phrase"><p>"Mi tulipán favorito del mundo entero."</p></div></div><div class="ls-status"><div class="ls-status-dot"></div><span id="lsSt">Esperando...</span></div><div class="ls-dots" id="lsDots"><div class="ls-dot on"></div><div class="ls-dot"></div><div class="ls-dot"></div><div class="ls-dot"></div><div class="ls-dot"></div><div class="ls-dot"></div></div></div><div class="ls-bar"><div class="ls-bar-fill" id="lsBar"></div></div></div>
 
 <div class="pre" id="pre"><p class="pre-name">Marah</p><p class="pre-sub">Preparando algo especial</p><div class="pre-line"><div class="pre-fill"></div></div></div>
 
 <div class="vol" id="vol"><div class="vol-c"><div class="vol-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1" stroke-linecap="round"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></div><h2>Antes de empezar, mi vida</h2><p>Sube el volumen al máximo y ponte los cascos si puedes.</p><div class="vol-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Ordinary — Alex Warren</div><br><button class="sbtn" id="go">Comenzar</button></div></div>
 
 <div class="mp" id="mp"><button class="mbtn" id="mbtn"><svg id="pi" viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg><svg id="pai" viewBox="0 0 24 24" style="display:none"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg></button><div class="mi"><span class="mi-t">Ordinary</span><span class="mi-a">Alex Warren</span></div><div class="bars" id="bars"><span></span><span></span><span></span><span></span></div></div>
+
 <audio id="au" loop preload="auto"><source src="ordinary.mp3" type="audio/mpeg"></audio>
 <canvas id="pc"></canvas>
 
 <main id="mn">
-<section class="hero"><div class="hero-orb a"></div><div class="hero-orb b"></div><div class="hc"><div class="h-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>18 · Febrero · 2026</div><div class="h-line-top"></div><h1>Feliz Cumpleaños<span class="nm">Marah</span></h1><p class="h-sub">Dieciocho años de luz</p></div><div class="h-ghost">18</div><div class="h-scroll"><span>Desliza</span><i></i></div></section>
 
-<section class="intro sec"><div class="con rv"><span class="tag">Hecho con amor</span><h2>Hoy cumples <em>dieciocho</em> y quise crear algo para celebrar juntos aunque estemos lejos.</h2><div class="intro-pills"><span class="intro-pill">Tulipanes</span><span class="intro-pill">Amor</span><span class="intro-pill">Distancia</span><span class="intro-pill">Para siempre</span></div></div></section>
+<!-- HERO -->
+<section class="hero">
+<!-- Rapunzel video background -->
+<div class="hero-video-bg">
+<video autoplay muted loop playsinline><source src="rapunzel.mp4" type="video/mp4"></video>
+<div class="hero-video-fade"></div>
+<div class="hero-video-fade-top"></div>
+<div class="hero-video-fade-left"></div>
+<div class="hero-video-fade-right"></div>
+<div class="hero-video-noise"></div>
+<div class="hero-video-particles"></div>
+</div>
+<div class="hero-orb a"></div><div class="hero-orb b"></div><div class="hero-orb c"></div>
+<!-- Hero floating lanterns -->
+<div class="hero-lanterns">
+<div class="hero-lantern hl1"><svg width="18" height="24" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".5"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".2"/></svg></div>
+<div class="hero-lantern hl2"><svg width="14" height="20" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#E8A0BF" opacity=".4"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".15"/></svg></div>
+<div class="hero-lantern hl3"><svg width="16" height="22" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".45"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".18"/></svg></div>
+<div class="hero-lantern hl4"><svg width="12" height="18" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#B8A0D4" opacity=".35"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".12"/></svg></div>
+<div class="hero-lantern hl5"><svg width="15" height="21" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".4"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".15"/></svg></div>
+<div class="hero-lantern hl6"><svg width="13" height="19" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#F2C4CE" opacity=".3"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".1"/></svg></div>
+<div class="hero-lantern hl7"><svg width="11" height="16" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".3"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".1"/></svg></div>
+<div class="hero-lantern hl8"><svg width="14" height="20" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#E8A0BF" opacity=".25"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".1"/></svg></div>
+<div class="hero-lantern hl9"><svg width="16" height="22" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".35"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".12"/></svg></div>
+<div class="hero-lantern hl10"><svg width="12" height="18" viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#B8A0D4" opacity=".25"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+</div>
+<!-- Hair decoration left/right -->
+<div class="h-hair left"><svg viewBox="0 0 60 120" fill="none"><path d="M50 0C50 0 10 30 15 60C20 90 55 100 50 120" stroke="#C9A96E" stroke-width=".8" opacity=".3" fill="none"/><path d="M45 5C45 5 8 35 12 65C16 95 48 105 45 118" stroke="#C9A96E" stroke-width=".4" opacity=".15" fill="none"/><circle cx="15" cy="50" r="3" fill="#E8A0BF" opacity=".06"/><circle cx="20" cy="80" r="2" fill="#F2C4CE" opacity=".05"/></svg></div>
+<div class="h-hair right"><svg viewBox="0 0 60 120" fill="none"><path d="M10 0C10 0 50 30 45 60C40 90 5 100 10 120" stroke="#C9A96E" stroke-width=".8" opacity=".3" fill="none"/><path d="M15 5C15 5 52 35 48 65C44 95 12 105 15 118" stroke="#C9A96E" stroke-width=".4" opacity=".15" fill="none"/><circle cx="45" cy="50" r="3" fill="#B8A0D4" opacity=".06"/><circle cx="40" cy="80" r="2" fill="#F2C4CE" opacity=".05"/></svg></div>
+<div class="hc">
+<div class="h-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>18 · Febrero · 2026</div>
+<div class="h-line-top"></div>
+<!-- Tower -->
+<div class="hero-tower">
+<div class="hero-tower-glow"></div>
+<svg viewBox="0 0 60 90" fill="none"><rect x="18" y="30" width="24" height="56" rx="2" fill="#B8A0D4" opacity=".12"/><path d="M12 30L30 8L48 30Z" fill="#C4A8E0" opacity=".08"/><rect x="25" y="42" width="10" height="14" rx="2" fill="rgba(255,255,255,.03)"/><path d="M28 42 L28 56" stroke="rgba(255,255,255,.02)" stroke-width=".5"/><path d="M25 49 L35 49" stroke="rgba(255,255,255,.02)" stroke-width=".5"/><circle cx="30" cy="6" r="3" fill="#C9A96E" opacity=".15"/><path d="M30 9C30 9 12 24 8 45" stroke="#C9A96E" stroke-width=".5" opacity=".1" fill="none"/><path d="M30 9C30 9 48 24 52 45" stroke="#C9A96E" stroke-width=".5" opacity=".1" fill="none"/><circle cx="14" cy="38" r="1.5" fill="#E8A0BF" opacity=".06"/><circle cx="46" cy="40" r="1.5" fill="#E8A0BF" opacity=".06"/><rect x="18" y="82" width="24" height="4" rx="1" fill="#B8A0D4" opacity=".06"/></svg>
+</div>
+<!-- Crown -->
+<div class="hero-crown"><svg viewBox="0 0 60 40" fill="none"><path d="M5 35L10 12L20 22L30 5L40 22L50 12L55 35Z" stroke="#C9A96E" stroke-width="1" fill="none" opacity=".35"/><circle cx="30" cy="5" r="2.5" fill="#C9A96E" opacity=".2"/><circle cx="10" cy="12" r="1.5" fill="#E8A0BF" opacity=".15"/><circle cx="50" cy="12" r="1.5" fill="#E8A0BF" opacity=".15"/><circle cx="20" cy="33" r="1.5" fill="#B8A0D4" opacity=".1"/><circle cx="30" cy="33" r="1.5" fill="#C9A96E" opacity=".15"/><circle cx="40" cy="33" r="1.5" fill="#B8A0D4" opacity=".1"/></svg></div>
+<h1>Feliz Cumpleaños<span class="nm">Marah</span></h1>
+<p class="h-sub">Dieciocho años de luz ☀</p>
+<div class="h-age"><span>18</span></div>
+<div class="h-details">
+<div class="h-detail"><div class="h-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><span>Amor</span></div>
+<div class="h-detail"><div class="h-detail-icon"><svg viewBox="0 0 24 48" fill="none"><path d="M12 18C12 18 6 8 6 4C6 1.5 8.5 0 12 0C15.5 0 18 1.5 18 4C18 8 12 18 12 18Z" fill="#E8A0BF" opacity=".35"/><rect x="11" y="17" width="2" height="8" rx="1" fill="#A8B5A0" opacity=".3"/></svg></div><span>Tulipanes</span></div>
+<div class="h-detail"><div class="h-detail-icon"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".35"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".12"/></svg></div><span>Linternas</span></div>
+<div class="h-detail"><div class="h-detail-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#F0C75E" opacity=".15"/><g stroke="#F0C75E" stroke-width=".8" opacity=".12"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></g></svg></div><span>Rapunzel</span></div>
+</div>
+<div class="h-rapunzel">
+<div class="h-rapunzel-inner">
+<p>"Al fin veo la luz, y es como si el cielo se despejara"</p>
+<span class="rq-attr"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".4"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".15"/></svg> Rapunzel — Enredados ✦</span>
+</div>
+</div>
+</div>
+<div class="h-ghost">18</div>
+<div class="h-scroll"><span>Desliza</span><i></i></div>
+</section>
+
+<section class="intro sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sun-burst"><svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="30" fill="#F0C75E" opacity=".08"/><g stroke="#F0C75E" stroke-width=".3" opacity=".06"><line x1="100" y1="10" x2="100" y2="60"/><line x1="100" y1="140" x2="100" y2="190"/><line x1="10" y1="100" x2="60" y2="100"/><line x1="140" y1="100" x2="190" y2="100"/><line x1="36" y1="36" x2="72" y2="72"/><line x1="128" y1="128" x2="164" y2="164"/><line x1="164" y1="36" x2="128" y2="72"/><line x1="36" y1="164" x2="72" y2="128"/></g></svg></div>
+<div class="con rv">
+<span class="tag">Hecho con amor</span>
+<h2>Hoy cumples <em>dieciocho</em> y quise crear algo para celebrar juntos aunque estemos lejos.</h2>
+<div class="intro-pills">
+<span class="intro-pill"><svg viewBox="0 0 24 48" fill="none"><path d="M12 16C12 16 7 8 7 4.5C7 2 9 0 12 0C15 0 17 2 17 4.5C17 8 12 16 12 16Z" fill="#E8A0BF" opacity=".4"/></svg>Tulipanes</span>
+<span class="intro-pill"><svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Amor</span>
+<span class="intro-pill"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".35"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".1"/></svg>Rapunzel</span>
+<span class="intro-pill"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#F0C75E" opacity=".12"/><g stroke="#F0C75E" stroke-width=".6" opacity=".15"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></g></svg>Para siempre</span>
+</div>
+<div class="intro-deco">
+<svg viewBox="0 0 100 60" fill="none">
+<ellipse cx="50" cy="35" rx="22" ry="16" fill="#A8B5A0" opacity=".15"/>
+<circle cx="64" cy="28" r="6" fill="#A8B5A0" opacity=".12"/>
+<circle cx="66" cy="27" r="2" fill="#050507" opacity=".1"/>
+<circle cx="65.5" cy="26.5" r=".8" fill="#fff" opacity=".05"/>
+<path d="M28 35Q18 35 12 30" stroke="#A8B5A0" stroke-width="2.5" opacity=".1" fill="none" stroke-linecap="round"/>
+<path d="M38 48Q42 56 50 56Q58 56 58 48" stroke="#A8B5A0" stroke-width="1.5" opacity=".08" fill="none"/>
+</svg>
+</div>
+</div>
+<!-- Pascal peeking from corner -->
+<div class="pascal-peek" style="bottom:20px;right:20px"><svg viewBox="0 0 40 28" fill="none"><ellipse cx="20" cy="16" rx="10" ry="8" fill="#A8B5A0" opacity=".25"/><circle cx="26" cy="13" r="3" fill="#A8B5A0" opacity=".2"/><circle cx="27" cy="12.5" r="1.2" fill="#050507" opacity=".15"/><circle cx="27.3" cy="12" r=".4" fill="#fff" opacity=".08"/><path d="M10 16Q5 16 3 14" stroke="#A8B5A0" stroke-width="1.5" opacity=".15" fill="none" stroke-linecap="round"/></svg></div>
+</section>
+
+<!-- Rapunzel ornament divider -->
+<div class="rapunzel-divider">
+<svg viewBox="0 0 60 40" fill="none"><path d="M10 35L14 12L22 22L30 5L38 22L46 12L50 35Z" stroke="#C9A96E" stroke-width=".5" fill="none" opacity=".2"/><circle cx="30" cy="5" r="2" fill="#F0C75E" opacity=".1"/><path d="M30 8Q22 16 20 30" stroke="#C9A96E" stroke-width=".3" opacity=".08" fill="none"/><path d="M30 8Q38 16 40 30" stroke="#C9A96E" stroke-width=".3" opacity=".08" fill="none"/></svg>
+</div>
+
+<section class="sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<!-- Section side decorations: tower left, lantern right -->
+<div class="sec-deco-left"><svg viewBox="0 0 40 65" fill="none"><rect x="12" y="22" width="16" height="40" rx="1" fill="#B8A0D4" opacity=".15"/><path d="M8 22L20 6L32 22Z" fill="#C4A8E0" opacity=".1"/><rect x="17" y="30" width="6" height="8" rx="1" fill="#050507" opacity=".15"/><circle cx="20" cy="4" r="2" fill="#C9A96E" opacity=".15"/><path d="M20 6C20 6 8 16 6 30" stroke="#C9A96E" stroke-width=".4" opacity=".08" fill="none"/></svg></div>
+<div class="sec-deco-right"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".3"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".12"/><line x1="12" y1="20" x2="12" y2="30" stroke="#C9A96E" stroke-width=".3" opacity=".1"/></svg></div>
+<!-- Corner lanterns -->
+<div class="sec-lantern-tl"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".3"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".1"/></svg></div>
+<div class="sec-lantern-br"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#E8A0BF" opacity=".2"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+<div class="con">
+<div class="sh rv"><span class="tag">Nuestros momentos</span><h2>Cada foto guarda un recuerdo</h2><p>Los momentos que guardo en mi corazón</p></div>
+<div class="gg">
+<div class="gi tall rv"><img src="foto1.jpeg"><span class="cap">Momento especial</span></div>
+<div class="gi rv d1"><img src="foto2.jpeg"><span class="cap">Tu sonrisa</span></div>
+<div class="gi rv d2"><img src="foto3.jpeg"><span class="cap">Mi lugar favorito</span></div>
+<div class="gi rv d1"><img src="foto4.jpeg"><span class="cap">Nuestras risas</span></div>
+<div class="gi rv d2"><img src="foto5.jpeg"><span class="cap">Momentos únicos</span></div>
+<div class="gi tall rv d3"><img src="foto6.jpeg"><span class="cap">Para siempre</span></div>
+</div>
+</div>
+</section>
+
+<div class="marq"><div class="marq-inner" id="m1">✦ tulipanes para ti ✦ linternas flotantes ✦ mi rapunzel ✦ al fin veo la luz ✦ mi flor dorada ✦ tulipanes para ti ✦ linternas flotantes ✦ mi rapunzel ✦</div></div>
+
+<!-- ALBUM PREVIEW -->
+<section class="album-preview-sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sec-deco-right"><svg viewBox="0 0 40 28" fill="none"><ellipse cx="20" cy="16" rx="10" ry="8" fill="#A8B5A0" opacity=".15"/><circle cx="26" cy="13" r="3" fill="#A8B5A0" opacity=".12"/><circle cx="27" cy="12.5" r="1" fill="#050507" opacity=".1"/><path d="M10 16Q5 16 3 14" stroke="#A8B5A0" stroke-width="1.5" opacity=".1" fill="none" stroke-linecap="round"/></svg></div>
+<div class="con rv" style="text-align:center">
+<span class="tag">Álbum privado</span>
+<div class="album-preview-wrap" id="openAlbum">
+<div class="album-preview-deco apd-tr"><svg viewBox="0 0 50 70" fill="none"><rect x="14" y="20" width="18" height="45" rx="1" fill="#B8A0D4" opacity=".12"/><path d="M10 20L25 5L40 20Z" fill="#C4A8E0" opacity=".08"/><rect x="20" y="28" width="7" height="9" rx="1" fill="#050507" opacity=".1"/><path d="M25 7Q36 14 34 32" stroke="#C9A96E" stroke-width=".4" opacity=".1" fill="none"/></svg></div>
+<div class="album-preview-deco apd-bl"><svg viewBox="0 0 40 55" fill="none"><path d="M15 22C15 22 10 14 10 9C10 5 12 3 15 3C18 3 20 5 20 9C20 14 15 22 15 22Z" fill="#E8A0BF" opacity=".2"/><rect x="14" y="21" width="2" height="30" rx="1" fill="#A8B5A0" opacity=".15"/><path d="M28 28C28 28 24 21 24 17C24 14 25.5 12 28 12C30.5 12 32 14 32 17C32 21 28 28 28 28Z" fill="#F2C4CE" opacity=".15"/><rect x="27" y="27" width="2" height="24" rx="1" fill="#A8B5A0" opacity=".12"/></svg></div>
+<div class="album-preview-card">
+<div class="album-preview-photos">
+<div class="album-preview-grid"><img src="foto1.jpeg"><img src="foto5.jpeg"><img src="foto3.jpeg"><img src="foto8.jpeg"><img src="foto12.jpeg"><img src="foto15.jpeg"></div>
+<div class="album-preview-overlay"><div class="album-preview-overlay-content">
+<div class="album-preview-count"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>30 fotos</div>
+<h3 class="album-preview-title">Nuestro Álbum</h3>
+<p class="album-preview-sub"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".4"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".12"/></svg>Toca para abrir nuestra colección ✦</p>
+</div></div>
+</div>
+<div class="album-preview-body">
+<div class="album-preview-info"><div class="album-preview-avatar"><img src="foto2.jpeg"></div><div class="album-preview-meta"><span class="apm-name">Marah & yo</span><span class="apm-date">2025 — 2026</span></div></div>
+<div class="album-preview-open">Abrir<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="rapunzel-divider">
+<svg viewBox="0 0 80 30" fill="none"><path d="M0 15C15 15 20 5 30 5C40 5 40 25 50 25C60 25 65 15 80 15" stroke="#C9A96E" stroke-width=".4" opacity=".08" fill="none"/><circle cx="30" cy="5" r="2" fill="#E8A0BF" opacity=".04"/><circle cx="50" cy="25" r="2" fill="#B8A0D4" opacity=".04"/><circle cx="40" cy="15" r="1.5" fill="#F0C75E" opacity=".05"/></svg>
+</div>
+
+<section class="quote sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sun-burst"><svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="25" fill="#F0C75E" opacity=".05"/><g stroke="#F0C75E" stroke-width=".2" opacity=".04"><line x1="100" y1="15" x2="100" y2="65"/><line x1="100" y1="135" x2="100" y2="185"/><line x1="15" y1="100" x2="65" y2="100"/><line x1="135" y1="100" x2="185" y2="100"/><line x1="40" y1="40" x2="72" y2="72"/><line x1="128" y1="128" x2="160" y2="160"/><line x1="160" y1="40" x2="128" y2="72"/><line x1="40" y1="160" x2="72" y2="128"/></g></svg></div>
+<div class="quote-mark">"</div>
+<div class="sec-deco-left"><svg viewBox="0 0 24 48" fill="none"><path d="M12 18C12 18 6 8 6 4C6 1.5 8.5 0 12 0C15.5 0 18 1.5 18 4C18 8 12 18 12 18Z" fill="#E8A0BF" opacity=".3"/><rect x="11" y="17" width="2" height="28" rx="1" fill="#A8B5A0" opacity=".2"/></svg></div>
+<div class="sec-deco-right"><svg viewBox="0 0 24 48" fill="none"><path d="M12 18C12 18 6 8 6 4C6 1.5 8.5 0 12 0C15.5 0 18 1.5 18 4C18 8 12 18 12 18Z" fill="#F2C4CE" opacity=".25"/><rect x="11" y="17" width="2" height="28" rx="1" fill="#A8B5A0" opacity=".18"/></svg></div>
+<div class="con rv">
+<p class="quote-text">"Nunca creía que el amor de verdad existía, hasta que te encontré a ti."</p>
+<p class="quote-attr">— Para Marah, siempre</p>
+<div class="quote-deco"><svg viewBox="0 0 60 25" fill="none"><path d="M15 22L18 6L26 16L30 3L34 16L42 6L45 22Z" stroke="#C9A96E" stroke-width=".4" fill="none" opacity=".35"/><circle cx="30" cy="3" r="1.5" fill="#C9A96E" opacity=".15"/></svg></div>
+</div>
+<!-- Rapunzel quote badge -->
+<div class="rapunzel-badge" style="top:20%;right:8%;transform:rotate(5deg)">"Al fin veo la luz" ☀</div>
+</section>
 
 <div class="orn"><i class="orn-l"></i><i class="orn-d"></i><i class="orn-l"></i></div>
 
-<section class="sec"><div class="con"><div class="sh rv"><span class="tag">Nuestros momentos</span><h2>Cada foto guarda un recuerdo</h2><p>Los momentos que guardo en mi corazón</p></div><div class="gg"><div class="gi tall rv"><img src="foto1.jpeg"><span class="cap">Ese día especial</span></div><div class="gi rv d1"><img src="foto2.jpeg"><span class="cap">Tu sonrisa</span></div><div class="gi rv d2"><img src="foto3.jpeg"><span class="cap">Mi lugar favorito</span></div><div class="gi rv d1"><img src="foto4.jpeg"><span class="cap">Nuestras risas</span></div><div class="gi rv d2"><img src="foto5.jpeg"><span class="cap">Momentos únicos</span></div><div class="gi tall rv d3"><img src="foto6.jpeg"><span class="cap">Para siempre</span></div></div></div></section>
+<section class="sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sec-deco-left"><svg viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="5" fill="#F0C75E" opacity=".12"/><g opacity=".08"><ellipse cx="15" cy="7" rx="2" ry="4" fill="#F0C75E"/><ellipse cx="15" cy="23" rx="2" ry="4" fill="#F0C75E"/><ellipse cx="7" cy="15" rx="4" ry="2" fill="#F0C75E"/><ellipse cx="23" cy="15" rx="4" ry="2" fill="#F0C75E"/></g></svg></div>
+<div class="sec-deco-right"><svg viewBox="0 0 36 36" fill="none"><circle cx="16" cy="18" r="10" fill="none" stroke="#C9A96E" stroke-width=".8" opacity=".12"/><circle cx="16" cy="18" r="7" fill="#C9A96E" opacity=".02"/><rect x="26" y="16" width="9" height="3" rx="1.5" fill="#C9A96E" opacity=".08"/></svg></div>
+<div class="sec-lantern-tl"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#B8A0D4" opacity=".2"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+<div class="sec-lantern-br"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".2"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+<div class="con">
+<div class="sh rv"><span class="tag">Por qué te amo</span><h2>Podría escribir miles, pero aquí van algunas</h2></div>
+<div class="reasons-grid">
+<div class="reason card rv"><div class="reason-num">01 <svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><p class="reason-text">Contigo puedo ser <span class="hl">yo al 100%</span>, sin miedos.</p></div>
+<div class="reason card rv d1"><div class="reason-num">02 <svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".3"/></svg></div><p class="reason-text">Eres la persona más <span class="hl">fuerte</span> que he conocido.</p></div>
+<div class="reason card rv d2"><div class="reason-num">03 <svg viewBox="0 0 24 24" fill="#F0C75E" opacity=".15"><circle cx="12" cy="12" r="5"/></svg></div><p class="reason-text">Tu <span class="hl">risa</span> es mi sonido favorito del mundo.</p></div>
+<div class="reason card rv d3"><div class="reason-num">04 <svg viewBox="0 0 24 48" fill="none"><path d="M12 16C12 16 7 8 7 4.5C7 2 9 0 12 0C15 0 17 2 17 4.5C17 8 12 16 12 16Z" fill="#E8A0BF" opacity=".3"/></svg></div><p class="reason-text">Me haces querer ser <span class="gl">mejor</span> cada día.</p></div>
+<div class="reason card rv d2"><div class="reason-num">05</div><p class="reason-text"><span class="hl">1.861 km</span> no son nada si te siento en mi corazón.</p></div>
+<div class="reason card rv d3"><div class="reason-num">06</div><p class="reason-text">Me enseñaste que el <span class="hl">amor real</span> no necesita contacto físico.</p></div>
+<div class="reason card rv d2"><div class="reason-num">07</div><p class="reason-text">Eres <span class="hl">perfecta</span> por dentro y por fuera.</p></div>
+<div class="reason card rv d3"><div class="reason-num">08</div><p class="reason-text">Quiero que seas <span class="gl">mi futuro</span>, mi mujer, mi todo.</p></div>
+</div>
+</div>
+<!-- Pascal peeking -->
+<div class="pascal-peek" style="bottom:15px;left:15px;transform:scaleX(-1)"><svg viewBox="0 0 40 28" fill="none"><ellipse cx="20" cy="16" rx="10" ry="8" fill="#A8B5A0" opacity=".2"/><circle cx="26" cy="13" r="3" fill="#A8B5A0" opacity=".15"/><circle cx="27" cy="12.5" r="1" fill="#050507" opacity=".12"/><path d="M10 16Q5 16 3 14" stroke="#A8B5A0" stroke-width="1.5" opacity=".12" fill="none" stroke-linecap="round"/></svg></div>
+</section>
 
-<div class="marq"><div class="marq-inner" id="m1">tulipanes para ti — tulipanes para ti — tulipanes para ti — tulipanes para ti —</div></div>
+<section class="fp"><img src="foto7.jpeg"><div class="fp-ov"><div class="fp-t rv"><h3>Tú y yo</h3><p>La mejor historia que he vivido ✦</p></div></div></section>
 
-<section class="quote sec"><div class="quote-mark">"</div><div class="con rv"><p class="quote-text">"Nunca creía que el amor de verdad existía, hasta que te encontré a ti."</p><p class="quote-attr">— Para Marah, siempre</p></div></section>
+<section class="sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sec-deco-left"><svg viewBox="0 0 50 35" fill="none"><path d="M5 30L8 10L18 20L25 4L32 20L42 10L45 30Z" stroke="#C9A96E" stroke-width=".5" fill="none" opacity=".15"/><circle cx="25" cy="4" r="1.5" fill="#C9A96E" opacity=".1"/></svg></div>
+<div class="sec-deco-right"><svg viewBox="0 0 50 50" fill="none"><path d="M10 25C10 25 15 10 25 10C35 10 35 25 25 25C15 25 15 40 25 40C35 40 40 25 40 25" stroke="#C9A96E" stroke-width=".5" opacity=".1" fill="none"/></svg></div>
+<div class="con">
+<div class="sh rv"><span class="tag">Eres todo para mí</span><h2>Lo que significas en mi vida</h2></div>
+<div class="mean-grid">
+<div class="mean-card card rv"><span class="mean-e">🤝</span><h4 class="mean-t">Mi persona</h4><p class="mean-d">Siempre te elegiría</p></div>
+<div class="mean-card card rv d1"><span class="mean-e">🌷</span><h4 class="mean-t">Mi tulipán</h4><p class="mean-d">Bonita y única</p></div>
+<div class="mean-card card rv d2"><span class="mean-e">🏠</span><h4 class="mean-t">Mi hogar</h4><p class="mean-d">Contigo no necesito más</p></div>
+<div class="mean-card card rv d1"><span class="mean-e">☀️</span><h4 class="mean-t">Mi sol</h4><p class="mean-d">Mi flor dorada</p></div>
+<div class="mean-card card rv d2"><span class="mean-e">💜</span><h4 class="mean-t">Mi Rapunzel</h4><p class="mean-d">Mi princesa eterna</p></div>
+</div>
+</div>
+<div class="rapunzel-badge" style="bottom:25%;left:5%;transform:rotate(-3deg)">"Tengo un sueño" ✦</div>
+</section>
+
+<section class="vid sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="vid-orb"></div>
+<div class="sec-lantern-tl"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".25"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+<div class="sec-lantern-tr"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#E8A0BF" opacity=".2"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".06"/></svg></div>
+<div class="vid-content">
+<div class="rv"><span class="tag">Un momento especial</span></div>
+<div class="sh rv"><h2>Mi video favorito tuyo</h2><p>Este momento es uno de mis tesoros</p></div>
+<div class="vid-player card rv d2">
+<div class="vid-wrap" id="vfC"><video id="vfV" playsinline><source src="video1.mp4" type="video/mp4"></video><div class="vid-overlay" id="vfO"><div class="vid-play" id="vfPB"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div></div></div>
+<div class="vid-controls"><button class="vid-btn" id="vfB"><svg class="vp" viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg><svg class="vpa" viewBox="0 0 24 24"><rect x="7" y="5" width="3" height="14" rx="1"/><rect x="14" y="5" width="3" height="14" rx="1"/></svg></button><div class="vid-time" id="vfT">0:00 / 0:00</div></div>
+<p class="vid-title">Tu voz me encanta</p>
+<p class="vid-desc">Cada vez que veo este video mi corazón se llena de amor. Eres perfecta mi vida.</p>
+</div>
+</div>
+</section>
+
+<div class="marq"><div class="marq-inner" id="m2">✦ te amo marah ✦ mi rapunzel ✦ mi princesa ✦ al fin veo la luz ✦ te amo marah ✦ mi rapunzel ✦ mi princesa ✦</div></div>
+
+<section class="sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sec-deco-left"><svg viewBox="0 0 40 65" fill="none"><rect x="12" y="22" width="16" height="40" rx="1" fill="#B8A0D4" opacity=".1"/><path d="M8 22L20 6L32 22Z" fill="#C4A8E0" opacity=".06"/><circle cx="20" cy="4" r="2" fill="#C9A96E" opacity=".1"/><path d="M20 6Q10 16 8 35" stroke="#C9A96E" stroke-width=".3" opacity=".06" fill="none"/></svg></div>
+<div class="sec-deco-right"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" fill="#F0C75E" opacity=".08"/><g stroke="#F0C75E" stroke-width=".4" opacity=".06"><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></g></svg></div>
+<div class="con">
+<div class="sh rv"><span class="tag">Lo que admiro de ti</span><h2>Las cosas que me enamoran cada día</h2></div>
+<div class="virt-list">
+<div class="virt rv"><div class="virt-n">I</div><p class="virt-t">Tu <span class="hl">valentía</span> para enfrentarte a todo. Como Rapunzel saliendo de su torre, tú conquistas el mundo.</p></div>
+<div class="virt rv"><div class="virt-n">II</div><p class="virt-t">Tu <span class="hl">forma de querer</span>, con todo el corazón, sin guardarte nada.</p></div>
+<div class="virt rv"><div class="virt-n">III</div><p class="virt-t">Tu <span class="hl">sonrisa</span>, capaz de arreglarme el día a través de una pantalla.</p></div>
+<div class="virt rv"><div class="virt-n">IV</div><p class="virt-t">Tu <span class="hl">determinación</span> para mejorar cada día. Estoy muy orgulloso.</p></div>
+<div class="virt rv"><div class="virt-n">V</div><p class="virt-t">Que seas <span class="hl">tú misma</span> conmigo. Sin filtros. Solo tú, perfecta.</p></div>
+</div>
+</div>
+<div class="rapunzel-badge" style="top:15%;right:6%;transform:rotate(4deg)">"Eres mi nueva aventura" ✦</div>
+<div class="pascal-peek" style="top:50%;right:10px"><svg viewBox="0 0 40 28" fill="none"><ellipse cx="20" cy="16" rx="10" ry="8" fill="#A8B5A0" opacity=".18"/><circle cx="26" cy="13" r="3" fill="#A8B5A0" opacity=".12"/><circle cx="27" cy="12.5" r="1" fill="#050507" opacity=".1"/><path d="M10 16Q5 16 3 14" stroke="#A8B5A0" stroke-width="1.5" opacity=".1" fill="none" stroke-linecap="round"/></svg></div>
+</section>
 
 <div class="orn"><i class="orn-l"></i><i class="orn-d"></i><i class="orn-l"></i></div>
 
-<section class="sec"><div class="con"><div class="sh rv"><span class="tag">Por qué te amo</span><h2>Podría escribir miles, pero aquí van algunas</h2></div><div class="reasons-grid"><div class="reason card rv"><div class="reason-num">01</div><p class="reason-text">Contigo puedo ser <span class="hl">yo al 100%</span>, sin miedos.</p></div><div class="reason card rv d1"><div class="reason-num">02</div><p class="reason-text">Eres la persona más <span class="hl">fuerte</span> que he conocido.</p></div><div class="reason card rv d2"><div class="reason-num">03</div><p class="reason-text">Tu <span class="hl">risa</span> es mi sonido favorito del mundo.</p></div><div class="reason card rv d3"><div class="reason-num">04</div><p class="reason-text">Me haces querer ser <span class="gl">mejor</span> cada día.</p></div><div class="reason card rv d2"><div class="reason-num">05</div><p class="reason-text"><span class="hl">1.861 km</span> no son nada si te siento en mi corazón.</p></div><div class="reason card rv d3"><div class="reason-num">06</div><p class="reason-text">Me enseñaste que el <span class="hl">amor real</span> no necesita contacto físico.</p></div><div class="reason card rv d2"><div class="reason-num">07</div><p class="reason-text">Eres <span class="hl">perfecta</span> por dentro y por fuera.</p></div><div class="reason card rv d3"><div class="reason-num">08</div><p class="reason-text">Quiero que seas <span class="gl">mi futuro</span>, mi mujer, mi todo.</p></div></div></div></section>
+<section class="sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sec-lantern-tl"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".2"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+<div class="sec-lantern-tr"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#B8A0D4" opacity=".2"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".06"/></svg></div>
+<div class="sec-lantern-bl"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#E8A0BF" opacity=".18"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".06"/></svg></div>
+<div class="sec-lantern-br"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".2"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+<div class="con">
+<div class="sh rv"><span class="tag">Nuestra historia</span><h2>Los momentos que lo construyeron todo</h2></div>
+<div class="tl">
+<div class="tli"><div class="tl-dot"></div><p class="tl-date">05/04/25</p><h3 class="tl-title">El día que nos conocimos</h3><p class="tl-desc">Aquel primer contacto que lo cambió todo.</p><div class="tl-img"><img src="foto8.jpeg"></div></div>
+<div class="tli"><div class="tl-dot"></div><p class="tl-date">05/04/25</p><h3 class="tl-title">Nuestra primera conversación</h3><p class="tl-desc">Esa conversación donde supiste que había algo diferente.</p></div>
+<div class="tli"><div class="tl-dot"></div><p class="tl-date">Días después</p><h3 class="tl-title">Cuando supe que eras especial</h3><p class="tl-desc">El momento exacto donde todo cambió.</p><div class="tl-img"><img src="foto9.jpeg"></div></div>
+<div class="tli"><div class="tl-dot"></div><p class="tl-date">10/05/25</p><h3 class="tl-title">Nos hicimos novios</h3><p class="tl-desc">El día más feliz de mi vida.</p></div>
+<div class="tli"><div class="tl-dot"></div><p class="tl-date">10/05/25</p><h3 class="tl-title">La primera vez juntos</h3><p class="tl-desc">Ese abrazo, los nervios, las lágrimas.</p><div class="tl-img"><img src="foto10.jpeg"></div></div>
+<div class="tli"><div class="tl-dot"></div><p class="tl-date">18 Feb 2026</p><h3 class="tl-title">Hoy — Tus 18 ☀</h3><p class="tl-desc">El primero de muchos cumpleaños juntos.</p></div>
+</div>
+</div>
+</section>
 
-<section class="fp"><img src="foto7.jpeg"><div class="fp-ov"><div class="fp-t rv"><h3>Tú y yo</h3><p>La mejor historia que he vivido</p></div></div></section>
+<section class="strip"><div class="strip-inner" id="str"><div class="strip-item"><img src="foto11.jpeg"></div><div class="strip-item"><img src="foto12.jpeg"></div><div class="strip-item"><img src="foto13.jpeg"></div><div class="strip-item"><img src="foto14.jpeg"></div><div class="strip-item"><img src="foto15.jpeg"></div><div class="strip-item"><img src="foto16.jpeg"></div><div class="strip-item"><img src="foto17.jpeg"></div><div class="strip-item"><img src="foto18.jpeg"></div><div class="strip-item"><img src="foto19.jpeg"></div><div class="strip-item"><img src="foto20.jpeg"></div><div class="strip-item"><img src="foto21.jpeg"></div><div class="strip-item"><img src="foto22.jpeg"></div><div class="strip-item"><img src="foto23.jpeg"></div><div class="strip-item"><img src="foto24.jpeg"></div><div class="strip-item"><img src="foto25.jpeg"></div><div class="strip-item"><img src="foto26.jpeg"></div><div class="strip-item"><img src="foto28.jpeg"></div><div class="strip-item"><img src="foto29.jpeg"></div><div class="strip-item"><img src="foto30.jpeg"></div></div></section>
 
-<section class="sec"><div class="con"><div class="sh rv"><span class="tag">Eres todo para mí</span><h2>Lo que significas en mi vida</h2></div><div class="mean-grid"><div class="mean-card card rv"><span class="mean-e">🤍</span><h4 class="mean-t">Mi persona</h4><p class="mean-d">Siempre te elegiría</p></div><div class="mean-card card rv d1"><span class="mean-e">🌷</span><h4 class="mean-t">Mi tulipán</h4><p class="mean-d">Bonita y única</p></div><div class="mean-card card rv d2"><span class="mean-e">🏠</span><h4 class="mean-t">Mi hogar</h4><p class="mean-d">Contigo no necesito más</p></div><div class="mean-card card rv d1"><span class="mean-e">✨</span><h4 class="mean-t">Mi futuro</h4><p class="mean-d">Lo único que necesito</p></div><div class="mean-card card rv d2"><span class="mean-e">💪</span><h4 class="mean-t">Mi orgullo</h4><p class="mean-d">Lo que has logrado</p></div></div></div></section>
-
-<section class="vid sec"><div class="vid-orb"></div><div class="vid-content"><div class="rv"><span class="tag">Un momento especial</span></div><div class="sh rv"><h2>Mi video favorito tuyo</h2><p>Este momento es uno de mis tesoros</p></div><div class="vid-player card rv d2"><div class="vid-wrap" id="vfC"><video id="vfV" playsinline><source src="video1.mp4" type="video/mp4"></video><div class="vid-overlay" id="vfO"><div class="vid-play" id="vfPB"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div></div></div><div class="vid-controls"><button class="vid-btn" id="vfB"><svg class="vp" viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg><svg class="vpa" viewBox="0 0 24 24"><rect x="7" y="5" width="3" height="14" rx="1"/><rect x="14" y="5" width="3" height="14" rx="1"/></svg></button><div class="vid-time" id="vfT">0:00 / 0:00</div></div><p class="vid-title">Tu voz, mi melodía</p><p class="vid-desc">Cada vez que veo este video mi corazón se llena de amor. Eres perfecta mi vida.</p></div></div></section>
-
-<div class="marq"><div class="marq-inner" id="m2">te amo marah — te amo marah — te amo marah — te amo marah —</div></div>
-
-<section class="sec"><div class="con"><div class="sh rv"><span class="tag">Lo que admiro de ti</span><h2>Las cosas que me enamoran cada día</h2></div><div class="virt-list"><div class="virt rv"><div class="virt-n">I</div><p class="virt-t">Tu <span class="hl">valentía</span> para enfrentarte a todo lo que la vida te pone delante. Eres más fuerte de lo que piensas.</p></div><div class="virt rv"><div class="virt-n">II</div><p class="virt-t">Tu <span class="hl">forma de querer</span>, con todo el corazón, sin guardarte nada.</p></div><div class="virt rv"><div class="virt-n">III</div><p class="virt-t">Tu <span class="hl">sonrisa</span>, capaz de arreglarme el día a través de una pantalla.</p></div><div class="virt rv"><div class="virt-n">IV</div><p class="virt-t">Tu <span class="hl">determinación</span> para mejorar cada día. Estoy muy orgulloso.</p></div><div class="virt rv"><div class="virt-n">V</div><p class="virt-t">Que seas <span class="hl">tú misma</span> conmigo. Sin filtros. Solo tú, perfecta.</p></div></div></div></section>
+<section class="love sec rv">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sun-burst"><svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="30" fill="#E8A0BF" opacity=".03"/><circle cx="100" cy="100" r="60" fill="none" stroke="#E8A0BF" stroke-width=".2" opacity=".02"/><circle cx="100" cy="100" r="90" fill="none" stroke="#C9A96E" stroke-width=".2" opacity=".015"/></svg></div>
+<div class="love-big">Te amo, Marah</div>
+<p class="love-sub">Y lo haré hoy, mañana, y cada día del resto de mi vida.</p>
+<div class="love-deco">
+<svg viewBox="0 0 24 48" fill="none"><path d="M12 18C12 18 6 8 6 4C6 1.5 8.5 0 12 0C15.5 0 18 1.5 18 4C18 8 12 18 12 18Z" fill="#E8A0BF" opacity=".4"/><rect x="11" y="17" width="2" height="28" rx="1" fill="#A8B5A0" opacity=".3"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+<svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".35"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".1"/></svg>
+</div>
+</section>
 
 <div class="orn"><i class="orn-l"></i><i class="orn-d"></i><i class="orn-l"></i></div>
 
-<section class="sec"><div class="con"><div class="sh rv"><span class="tag">Nuestra historia</span><h2>Los momentos que lo construyeron todo</h2></div><div class="tl"><div class="tli"><div class="tl-dot"></div><p class="tl-date">05/04/25</p><h3 class="tl-title">El día que nos conocimos</h3><p class="tl-desc">Aquel primer contacto que lo cambió todo.</p><div class="tl-img"><img src="foto8.jpeg"></div></div><div class="tli"><div class="tl-dot"></div><p class="tl-date">05/04/25</p><h3 class="tl-title">Nuestra primera conversación</h3><p class="tl-desc">Esa conversación donde supiste que había algo diferente.</p></div><div class="tli"><div class="tl-dot"></div><p class="tl-date">Días después</p><h3 class="tl-title">Cuando supe que eras especial</h3><p class="tl-desc">El momento exacto donde todo cambió.</p><div class="tl-img"><img src="foto9.jpeg"></div></div><div class="tli"><div class="tl-dot"></div><p class="tl-date">10/05/25</p><h3 class="tl-title">Nos hicimos novios</h3><p class="tl-desc">El día más feliz de mi vida.</p></div><div class="tli"><div class="tl-dot"></div><p class="tl-date">10/05/25</p><h3 class="tl-title">La primera vez juntos</h3><p class="tl-desc">Ese abrazo, los nervios, las lágrimas.</p><div class="tl-img"><img src="foto10.jpeg"></div></div><div class="tli"><div class="tl-dot"></div><p class="tl-date">18 Feb 2026</p><h3 class="tl-title">Hoy — Tus 18</h3><p class="tl-desc">El primero de muchos cumpleaños juntos.</p></div></div></div></section>
+<section class="sec" style="text-align:center">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sec-deco-left"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".2"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+<div class="sec-deco-right"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#E8A0BF" opacity=".18"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".06"/></svg></div>
+<div class="con">
+<div class="rv"><span class="tag">A través de la distancia</span></div>
+<div class="dist-row rv">
+<div class="dist-place"><span class="dist-flag">🇪🇸</span><p class="dist-name">España</p><p class="dist-label">Donde estoy yo</p></div>
+<div class="dist-mid"><p class="dist-km">1.861 km</p><div class="dist-line"><svg class="dist-heart" width="10" height="10" viewBox="0 0 24 24" fill="#D4606E"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><p class="dist-zero">Cero en amor</p></div>
+<div class="dist-place"><span class="dist-flag">🇩🇪</span><p class="dist-name">Alemania</p><p class="dist-label">Donde estás tú</p></div>
+</div>
+<div class="rv"><p class="dist-quote">"La distancia es solo una prueba para ver hasta dónde llega el amor."</p><div class="dist-badge"><span>Faltan</span><strong id="rD">--</strong><span>días para abrazarnos</span></div></div>
+</div>
+</section>
 
-<section class="strip"><div class="strip-inner" id="str"><div class="strip-item"><img src="foto11.jpeg"></div><div class="strip-item"><img src="foto12.jpeg"></div><div class="strip-item"><img src="foto13.jpeg"></div><div class="strip-item"><img src="foto14.jpeg"></div><div class="strip-item"><img src="foto15.jpeg"></div><div class="strip-item"><img src="foto16.jpeg"></div><div class="strip-item"><img src="foto17.jpeg"></div><div class="strip-item"><img src="foto1.jpeg"></div></div></section>
+<section class="sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sec-deco-left"><svg viewBox="0 0 40 28" fill="none"><ellipse cx="20" cy="16" rx="10" ry="8" fill="#A8B5A0" opacity=".12"/><circle cx="26" cy="13" r="3" fill="#A8B5A0" opacity=".08"/><circle cx="27" cy="12.5" r="1" fill="#050507" opacity=".06"/><path d="M10 16Q5 16 3 14" stroke="#A8B5A0" stroke-width="1" opacity=".06" fill="none" stroke-linecap="round"/></svg></div>
+<div class="con">
+<div class="sh rv"><span class="tag">Nuestro futuro</span><h2>Todo lo que nos espera juntos</h2></div>
+<div class="fut-grid">
+<div class="fut-card card rv"><span class="fut-e">🡠</span><h4 class="fut-t">Nuestra casa</h4><p class="fut-d">Un hogar lleno de amor</p></div>
+<div class="fut-card card rv d1"><span class="fut-e">✈️</span><h4 class="fut-t">Viajar juntos</h4><p class="fut-d">Descubrir el mundo contigo</p></div>
+<div class="fut-card card rv d2"><span class="fut-e">💍</span><h4 class="fut-t">Casarnos</h4><p class="fut-d">Tú con vestido blanco</p></div>
+<div class="fut-card card rv d3"><span class="fut-e">👶</span><h4 class="fut-t">Nuestra familia</h4><p class="fut-d">Ser padres juntos</p></div>
+<div class="fut-card card rv d2"><span class="fut-e">🌅</span><h4 class="fut-t">Envejecer juntos</h4><p class="fut-d">Cada arruga un recuerdo</p></div>
+<div class="fut-card card rv d3"><span class="fut-e">♾️</span><h4 class="fut-t">Para siempre</h4><p class="fut-d">En esta y en mil vidas</p></div>
+</div>
+</div>
+<div class="rapunzel-badge" style="bottom:10%;right:8%;transform:rotate(2deg)">"Un nuevo sueño por cumplir" ☀</div>
+</section>
 
-<section class="love sec rv"><div class="love-big">Te amo, Marah</div><p class="love-sub">Y lo haré hoy, mañana, y cada día del resto de mi vida.</p></section>
+<div class="rapunzel-divider">
+<svg viewBox="0 0 60 60" fill="none"><path d="M30 5C30 5 10 20 10 35C10 50 30 55 30 55C30 55 50 50 50 35C50 20 30 5 30 5Z" stroke="#E8A0BF" stroke-width=".3" fill="none" opacity=".04"/><circle cx="30" cy="30" r="3" fill="#F0C75E" opacity=".03"/><path d="M30 10Q20 22 18 35" stroke="#C9A96E" stroke-width=".3" opacity=".04" fill="none"/><path d="M30 10Q40 22 42 35" stroke="#C9A96E" stroke-width=".3" opacity=".04" fill="none"/></svg>
+</div>
 
-<div class="orn"><i class="orn-l"></i><i class="orn-d"></i><i class="orn-l"></i></div>
+<section class="sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="sec-deco-left"><svg viewBox="0 0 50 35" fill="none"><path d="M5 30L8 10L18 20L25 4L32 20L42 10L45 30Z" stroke="#C9A96E" stroke-width=".4" fill="none" opacity=".1"/><circle cx="25" cy="4" r="1.5" fill="#C9A96E" opacity=".08"/></svg></div>
+<div class="sec-deco-right"><svg viewBox="0 0 24 48" fill="none"><path d="M12 18C12 18 6 8 6 4C6 1.5 8.5 0 12 0C15.5 0 18 1.5 18 4C18 8 12 18 12 18Z" fill="#B8A0D4" opacity=".15"/><rect x="11" y="17" width="2" height="28" rx="1" fill="#A8B5A0" opacity=".12"/></svg></div>
+<div class="sec-lantern-tl"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".2"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+<div class="sec-lantern-br"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#B8A0D4" opacity=".18"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".06"/></svg></div>
+<div class="con">
+<div class="sh rv"><span class="tag">Mis promesas</span><h2>Cosas que siempre voy a cumplir</h2></div>
+<div class="prom-list">
+<div class="prom card rv"><div class="prom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><p>Siempre a tu lado, en las buenas y en las malas.</p></div>
+<div class="prom card rv"><div class="prom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><p>Protegerte y cuidarte como mereces.</p></div>
+<div class="prom card rv"><div class="prom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg></div><p>Hacerte reír cada día y recordarte lo increíble que eres.</p></div>
+<div class="prom card rv"><div class="prom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div><p>Construir un hogar juntos que sea solo nuestro.</p></div>
+<div class="prom card rv"><div class="prom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div><p>Elegirte cada día sin importar nada.</p></div>
+</div>
+</div>
+</section>
 
-<section class="sec" style="text-align:center"><div class="con"><div class="rv"><span class="tag">A través de la distancia</span></div><div class="dist-row rv"><div class="dist-place"><span class="dist-flag">🇪🇸</span><p class="dist-name">España</p><p class="dist-label">Donde estoy yo</p></div><div class="dist-mid"><p class="dist-km">1.861 km</p><div class="dist-line"><svg class="dist-heart" width="10" height="10" viewBox="0 0 24 24" fill="#D4606E"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><p class="dist-zero">Cero en amor</p></div><div class="dist-place"><span class="dist-flag">🇩🇪</span><p class="dist-name">Alemania</p><p class="dist-label">Donde estás tú</p></div></div><div class="rv"><p class="dist-quote">"La distancia es solo una prueba para ver hasta dónde llega el amor."</p><div class="dist-badge"><span>Faltan</span><strong id="rD">--</strong><span>días para abrazarnos</span></div></div></div></section>
+<section class="sec" style="text-align:center">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="con rv">
+<span class="tag">Cuenta atrás para vernos</span>
+<div class="cd-wrap card"><div class="cd-item"><div class="cd-num" id="cD">--</div><div class="cd-unit">Días</div></div><div class="cd-sep">:</div><div class="cd-item"><div class="cd-num" id="cH">--</div><div class="cd-unit">Horas</div></div><div class="cd-sep">:</div><div class="cd-item"><div class="cd-num" id="cM">--</div><div class="cd-unit">Min</div></div><div class="cd-sep">:</div><div class="cd-item"><div class="cd-num" id="cS">--</div><div class="cd-unit">Seg</div></div></div>
+<p class="cd-note">Cada segundo más cerca de tenerte entre mis brazos ✦</p>
+</div>
+</section>
 
-<section class="sec"><div class="con"><div class="sh rv"><span class="tag">Nuestro futuro</span><h2>Todo lo que nos espera juntos</h2></div><div class="fut-grid"><div class="fut-card card rv"><span class="fut-e">🏡</span><h4 class="fut-t">Nuestra casa</h4><p class="fut-d">Un hogar lleno de amor</p></div><div class="fut-card card rv d1"><span class="fut-e">✈️</span><h4 class="fut-t">Viajar juntos</h4><p class="fut-d">Descubrir el mundo contigo</p></div><div class="fut-card card rv d2"><span class="fut-e">💍</span><h4 class="fut-t">Casarnos</h4><p class="fut-d">Tú con vestido blanco</p></div><div class="fut-card card rv d3"><span class="fut-e">👶</span><h4 class="fut-t">Nuestra familia</h4><p class="fut-d">Ser padres juntos</p></div><div class="fut-card card rv d2"><span class="fut-e">🌅</span><h4 class="fut-t">Envejecer juntos</h4><p class="fut-d">Cada arruga un recuerdo</p></div><div class="fut-card card rv d3"><span class="fut-e">♾️</span><h4 class="fut-t">Para siempre</h4><p class="fut-d">En esta y en mil vidas</p></div></div></div></section>
+<div class="marq"><div class="marq-inner" id="m3">✦ por siempre juntos ✦ mi rapunzel ✦ al fin veo la luz ✦ mi flor dorada ✦ por siempre juntos ✦ mi rapunzel ✦ al fin veo la luz ✦</div></div>
 
-<section class="sec"><div class="con"><div class="sh rv"><span class="tag">Mis promesas</span><h2>Cosas que siempre voy a cumplir</h2></div><div class="prom-list"><div class="prom card rv"><div class="prom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><p>Siempre a tu lado, en las buenas y en las malas.</p></div><div class="prom card rv"><div class="prom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><p>Protegerte y cuidarte como mereces.</p></div><div class="prom card rv"><div class="prom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/></svg></div><p>Hacerte reír cada día y recordarte lo increíble que eres.</p></div><div class="prom card rv"><div class="prom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></div><p>Construir un hogar juntos que sea solo nuestro.</p></div><div class="prom card rv"><div class="prom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg></div><p>Elegirte cada día sin importar nada.</p></div></div></div></section>
-
-<section class="sec" style="text-align:center"><div class="con rv"><span class="tag">Cuenta atrás para vernos</span><div class="cd-wrap card"><div class="cd-item"><div class="cd-num" id="cD">--</div><div class="cd-unit">Días</div></div><div class="cd-sep">:</div><div class="cd-item"><div class="cd-num" id="cH">--</div><div class="cd-unit">Horas</div></div><div class="cd-sep">:</div><div class="cd-item"><div class="cd-num" id="cM">--</div><div class="cd-unit">Min</div></div><div class="cd-sep">:</div><div class="cd-item"><div class="cd-num" id="cS">--</div><div class="cd-unit">Seg</div></div></div><p class="cd-note">Cada segundo más cerca de tenerte entre mis brazos</p></div></section>
-
-<div class="marq"><div class="marq-inner" id="m3">por siempre juntos — por siempre juntos — por siempre juntos —</div></div>
-
-<section class="quote sec"><div class="quote-mark">"</div><div class="con rv"><p class="quote-text">"Quiero que seas la persona que venga con su vestido blanco y me diga sí quiero delante de nuestras familias."</p><p class="quote-attr">— Mi promesa para ti</p></div></section>
+<section class="quote sec">
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="quote-mark">"</div>
+<div class="sec-deco-left"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#C9A96E" opacity=".2"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".08"/></svg></div>
+<div class="sec-deco-right"><svg viewBox="0 0 24 32" fill="none"><rect x="7" y="6" width="10" height="14" rx="5" fill="#B8A0D4" opacity=".18"/><ellipse cx="12" cy="13" rx="3" ry="4" fill="#FFD700" opacity=".06"/></svg></div>
+<div class="con rv">
+<p class="quote-text">"Quiero que seas la persona que venga con su vestido blanco y me diga sí quiero delante de nuestras familias."</p>
+<p class="quote-attr">— Mi promesa para ti</p>
+</div>
+<div class="rapunzel-badge" style="bottom:20%;left:10%;transform:rotate(-2deg)">"Eres mi sueño hecho realidad" 💜</div>
+</section>
 
 <div class="orn"><i class="orn-l"></i><i class="orn-d"></i><i class="orn-l"></i><i class="orn-d"></i><i class="orn-l"></i></div>
 
-<section class="sec"><div class="env-wrap rv"><span class="tag">Una carta para ti</span><div class="env" id="envB"><div class="env-box card"><div class="env-seal"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><p class="env-label">Para Marah</p><p class="env-hint">Toca para abrir</p></div></div></div></section>
+<!-- LETTER SECTION with floating lanterns canvas -->
+<section class="sec letter-sec" id="letterSection">
+<div class="lantern-canvas-wrap"><canvas id="letterLanternCanvas"></canvas></div>
+<div class="golden-dust"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="env-wrap rv">
+<span class="tag">Una carta para ti</span>
+<div class="env" id="envB"><div class="env-box card"><div class="env-seal"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><p class="env-label">Para Marah</p><p class="env-hint">Toca para abrir</p></div></div>
+</div>
+</section>
 
-<footer class="ft"><p>Hecho con amor para Marah</p></footer>
+<footer class="ft">
+<div class="ft-deco">
+<svg viewBox="0 0 80 50" fill="none">
+<path d="M25 45L28 15L36 28L40 5L44 28L52 15L55 45Z" stroke="#C9A96E" stroke-width=".4" fill="none" opacity=".3"/>
+<circle cx="40" cy="5" r="2" fill="#C9A96E" opacity=".15"/>
+<path d="M40 8Q28 18 26 38" stroke="#C9A96E" stroke-width=".3" opacity=".1" fill="none"/>
+<path d="M40 8Q52 18 54 38" stroke="#C9A96E" stroke-width=".3" opacity=".1" fill="none"/>
+</svg>
+</div>
+<p>Hecho con amor para Marah ✦ Mi Rapunzel ☀</p>
+</footer>
 </main>
 
-<div class="lm" id="lm"><div class="lm-bg" id="lmBg"></div><div class="lm-paper"><div class="lm-tape"></div><button class="lm-close" id="lmX">×</button><div class="lm-head"><h3>Para ti, Marah</h3><span>18 de Febrero de 2026</span></div><div class="lm-sep"><i class="lm-sep-l"></i><i class="lm-sep-d"></i><i class="lm-sep-l"></i></div><div class="lm-body" id="lmB">
+<!-- ALBUM MODAL -->
+<div class="album-modal" id="albumModal"><div class="album-modal-bg"></div><div class="album-modal-inner">
+<div class="album-modal-header"><div class="album-modal-header-left"><div class="album-modal-logo"><svg viewBox="0 0 24 24" fill="none" stroke="#E8A0BF" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="album-modal-header-info"><h3>Nuestro Álbum</h3><span>30 recuerdos ✦</span></div></div><button class="album-modal-close" id="closeAlbum">✕</button></div>
+<div class="album-modal-body" id="albumBody"><div class="album-masonry" id="albumMasonry"></div></div>
+<div class="album-modal-footer"><div class="album-footer-heart"><svg viewBox="0 0 24 24" fill="#E8A0BF"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span>Hecho con amor</span></div><div class="album-modal-footer-right">Para siempre ✦</div></div>
+</div></div>
+
+<!-- LETTER MODAL -->
+<div class="lm" id="lm"><div class="lm-bg" id="lmBg"></div><canvas id="letterModalCanvas"></canvas><div class="lm-paper"><div class="lm-tape"></div><button class="lm-close" id="lmX">×</button><div class="lm-head"><h3>Para ti, Marah</h3><span>18 de Febrero de 2026</span></div><div class="lm-sep"><i class="lm-sep-l"></i><i class="lm-sep-d"></i><i class="lm-sep-l"></i></div><div class="lm-body" id="lmB">
 <p>Marah, feliz cumpleaños, <span class="hl">felices 18 años mi vida.</span></p>
 <p>Me pone muy feliz que cumplas años y estemos juntos mi vida, este va a ser el primero cumpleaños tuyo de muchísimos más en el que vas a recibir un regalo mío, y un mensaje como este.</p>
 <p>Estoy muy orgulloso de la persona que eres Marah, este año has conseguido muchas cosas, como <span class="hl">mejorar lo de la anorexia</span> — lo estás haciendo perfecto y estoy muy muy orgulloso de ti, muchísimo.</p>
@@ -531,63 +1103,265 @@ main{opacity:0;transition:opacity 1.4s}main.vis{opacity:1}
 <div class="spc"><p>Y en <span class="hl">pocos días Marah</span>, volveremos a estar juntos baby, poder abrazarnos, besarnos, pasar tiempo juntos y todo pero <span class="hl">JUNTOS BABY.</span></p></div>
 <p>Quiero que sepas que te amo muchísimo y que disfrutes muchísimo de tu cumpleaños porque te mereces todo lo bueno que te pase en la vida y siempre estaré a tu lado.</p>
 <p class="emp"><span class="hl">Te amo muchísimo desde el corazón.</span></p>
-</div><div class="lm-sign"><p>Con todo mi amor, siempre tuyo</p><div class="hearts"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div></div></div>
-
+</div><div class="lm-sign"><p>Con todo mi amor, siempre tuyo ✦</p><div class="hearts"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div></div></div>
 <div class="lbox" id="lbx"><button class="lbox-close" id="lbxC">×</button><img id="lbxI" src=""></div>
 
 <script>
 (function(){
 var ls=document.getElementById('ls'),ud=new Date('February 18, 2026 00:00:00').getTime(),sd=new Date('January 1, 2026 00:00:00').getTime(),td=ud-sd,done=false;
-
-/* Orbs */
 var lc=document.getElementById('lc'),cx=lc.getContext('2d');
 function rl(){lc.width=innerWidth;lc.height=innerHeight}rl();addEventListener('resize',rl);
-var orbs=[];function Orb(){this.x=Math.random()*lc.width;this.y=Math.random()*lc.height;this.r=70+Math.random()*180;this.vx=(Math.random()-.5)*.28;this.vy=(Math.random()-.5)*.28;var c=['232,160,191','201,169,110','242,196,206'];this.c=c[Math.floor(Math.random()*c.length)];this.a=.013+Math.random()*.018;this.ba=this.a}
+var orbs=[];function Orb(){this.x=Math.random()*lc.width;this.y=Math.random()*lc.height;this.r=70+Math.random()*180;this.vx=(Math.random()-.5)*.28;this.vy=(Math.random()-.5)*.28;var c=['232,160,191','201,169,110','242,196,206','184,160,212'];this.c=c[Math.floor(Math.random()*c.length)];this.a=.013+Math.random()*.018;this.ba=this.a}
 Orb.prototype.update=function(k){this.x+=this.vx;this.y+=this.vy;if(this.x<-this.r)this.x=lc.width+this.r;if(this.x>lc.width+this.r)this.x=-this.r;if(this.y<-this.r)this.y=lc.height+this.r;if(this.y>lc.height+this.r)this.y=-this.r;this.a=this.ba*k};
 Orb.prototype.draw=function(){var g=cx.createRadialGradient(this.x,this.y,0,this.x,this.y,this.r);g.addColorStop(0,'rgba('+this.c+','+this.a+')');g.addColorStop(1,'rgba('+this.c+',0)');cx.fillStyle=g;cx.fillRect(this.x-this.r,this.y-this.r,this.r*2,this.r*2)};
 for(var i=0;i<(innerWidth<500?3:5);i++)orbs.push(new Orb());var oI=1;
 function dO(){cx.clearRect(0,0,lc.width,lc.height);orbs.forEach(function(o){o.update(oI);o.draw()});if(!done)requestAnimationFrame(dO)}dO();
-
-/* Unlock particles */
 var uc=document.getElementById('uc'),ux=uc.getContext('2d');
 function ru(){uc.width=innerWidth;uc.height=innerHeight}ru();addEventListener('resize',ru);
-var uP=[];function UP(){this.x=innerWidth/2;this.y=innerHeight/2;var a=Math.random()*Math.PI*2,s=1+Math.random()*3.5;this.vx=Math.cos(a)*s;this.vy=Math.sin(a)*s;this.sz=1.2+Math.random()*2.5;this.life=1;this.decay=.004+Math.random()*.008;var c=['232,160,191','242,196,206','201,169,110','255,255,255'];this.c=c[Math.floor(Math.random()*c.length)]}
+var uP=[];function UP(){this.x=innerWidth/2;this.y=innerHeight/2;var a=Math.random()*Math.PI*2,s=1+Math.random()*3.5;this.vx=Math.cos(a)*s;this.vy=Math.sin(a)*s;this.sz=1.2+Math.random()*2.5;this.life=1;this.decay=.004+Math.random()*.008;var c=['232,160,191','242,196,206','201,169,110','255,255,255','184,160,212'];this.c=c[Math.floor(Math.random()*c.length)]}
 UP.prototype.update=function(){this.x+=this.vx;this.y+=this.vy;this.vy+=.015;this.life-=this.decay;return this.life>0};
-UP.prototype.draw=function(){ux.beginPath();ux.arc(this.x,this.y,this.sz*this.life,0,Math.PI*2);ux.fillStyle='rgba('+this.c+','+this.life*.5+')';ux.fill();ux.beginPath();ux.arc(this.x,this.y,this.sz*2.5*this.life,0,Math.PI*2);ux.fillStyle='rgba('+this.c+','+this.life*.12+')';ux.fill()};
+UP.prototype.draw=function(){ux.beginPath();ux.arc(this.x,this.y,this.sz*this.life,0,Math.PI*2);ux.fillStyle='rgba('+this.c+','+this.life*.5+')';ux.fill()};
 var uA=false;function spU(){for(var i=0;i<100;i++)uP.push(new UP());if(!uA){uA=true;anU()}}
 function anU(){ux.clearRect(0,0,uc.width,uc.height);uP=uP.filter(function(p){var a=p.update();if(a)p.draw();return a});if(uP.length>0)requestAnimationFrame(anU);else uA=false}
-
-/* Slideshow */
 var phs=document.querySelectorAll('.ls-ph'),dots=document.querySelectorAll('.ls-dot'),ci=0;
-function goS(n){phs[ci].classList.remove('on');dots[ci].classList.remove('on');ci=n;phs[ci].classList.add('on');dots[ci].classList.add('on')}
-setInterval(function(){if(!done)goS((ci+1)%phs.length)},6000);
+function goS(n){phs[ci].classList.remove('on');if(dots[ci])dots[ci].classList.remove('on');ci=n;phs[ci].classList.add('on');if(dots[ci])dots[ci].classList.add('on')}
+setInterval(function(){if(!done)goS((ci+1)%phs.length)},5000);
 dots.forEach(function(d,i){d.addEventListener('click',function(){goS(i)})});
-
-/* Phrases rotation */
 var phrases=document.querySelectorAll('.ls-phrase'),pi2=0;
 setInterval(function(){if(done)return;phrases[pi2].classList.remove('on');pi2=(pi2+1)%phrases.length;phrases[pi2].classList.add('on')},4500);
-
-/* Status */
 var stM=['Esperando...','Preparando tu sorpresa...','Cada segundo cuenta...','Algo increíble viene...'];
 var si=0;setInterval(function(){si=(si+1)%stM.length;var e=document.getElementById('lsSt');if(e&&!ls.classList.contains('heat'))e.textContent=stM[si]},6000);
+function tick(){if(done)return;var now=Date.now(),dist=ud-now;if(dist<=0){done=true;ls.classList.add('unlocking');spU();setTimeout(spU,600);setTimeout(spU,1200);setTimeout(function(){ls.classList.add('gone');setTimeout(function(){ls.style.display='none'},3000)},3200);return}var d=Math.floor(dist/864e5),h=Math.floor((dist%864e5)/36e5),m=Math.floor((dist%36e5)/6e4),s=Math.floor((dist%6e4)/1e3);var eS=document.getElementById('lS'),ns=s<10?'0'+s:String(s);if(eS.textContent!==ns){eS.style.transform='translateY(-3px)';eS.style.opacity='.3';setTimeout(function(){eS.textContent=ns;eS.style.transform='';eS.style.opacity=''},110)}document.getElementById('lD').textContent=d;document.getElementById('lH').textContent=h<10?'0'+h:h;document.getElementById('lM').textContent=m<10?'0'+m:m;document.getElementById('lsBar').style.width=Math.min((now-sd)/td*100,100)+'%';var ts=Math.floor(dist/1000),st=document.getElementById('lsSt'),rv=document.getElementById('lsRT'),big=document.getElementById('lsBig');if(ts<=300&&ts>60&&!ls.classList.contains('warm')){ls.classList.add('warm');st.textContent='⏳ Menos de 5 minutos'}if(ts<=60&&ts>0){if(!ls.classList.contains('heat')){ls.classList.add('heat');oI=3;st.textContent='Desbloqueando...'}rv.textContent=ts<=30?'✦ '+ts+' segundos...':'✦ Casi...'}if(ts<=10&&ts>0){if(!ls.classList.contains('fire')){ls.classList.add('fire');oI=5;for(var j=0;j<3;j++){var no=new Orb();no.ba=.04;orbs.push(no)}}big.textContent=ts;st.textContent=ts+'s';rv.textContent=ts<=5?'💖 '+ts+'...':'✦ '+ts+'...'}if(ts<=3&&ts>0&&!ls.classList.contains('final')){ls.classList.add('final');oI=7;for(var k=0;k<2;k++){var fo=new Orb();fo.ba=.055;orbs.push(fo)}}if(d===0&&h>0&&ts>300)st.textContent='Hoy — '+h+'h '+m+'m';if(d===1)st.textContent='Mañana es el día'}
+tick();setInterval(tick,1000);if(Date.now()>=ud){done=true;ls.style.display='none'}
 
-/* Tick */
-function tick(){
-if(done)return;var now=Date.now(),dist=ud-now;
-if(dist<=0){done=true;ls.classList.add('unlocking');spU();setTimeout(spU,600);setTimeout(spU,1200);setTimeout(function(){ls.classList.add('gone');setTimeout(function(){ls.style.display='none'},3000)},3200);return}
-var d=Math.floor(dist/864e5),h=Math.floor((dist%864e5)/36e5),m=Math.floor((dist%36e5)/6e4),s=Math.floor((dist%6e4)/1e3);
-var eS=document.getElementById('lS'),ns=s<10?'0'+s:String(s);
-if(eS.textContent!==ns){eS.style.transform='translateY(-3px)';eS.style.opacity='.3';setTimeout(function(){eS.textContent=ns;eS.style.transform='';eS.style.opacity=''},110)}
-document.getElementById('lD').textContent=d;document.getElementById('lH').textContent=h<10?'0'+h:h;document.getElementById('lM').textContent=m<10?'0'+m:m;
-document.getElementById('lsBar').style.width=Math.min((now-sd)/td*100,100)+'%';
-var ts=Math.floor(dist/1000),st=document.getElementById('lsSt'),rv=document.getElementById('lsRT'),big=document.getElementById('lsBig');
-if(ts<=300&&ts>60&&!ls.classList.contains('warm')){ls.classList.add('warm');st.textContent='⏳ Menos de 5 minutos'}
-if(ts<=60&&ts>0){if(!ls.classList.contains('heat')){ls.classList.add('heat');oI=3;st.textContent='Desbloqueando...'}rv.textContent=ts<=30?'✦ '+ts+' segundos...':'✦ Casi...'}
-if(ts<=10&&ts>0){if(!ls.classList.contains('fire')){ls.classList.add('fire');oI=5;for(var j=0;j<3;j++){var no=new Orb();no.ba=.04;orbs.push(no)}}big.textContent=ts;st.textContent=ts+'s';rv.textContent=ts<=5?'💖 '+ts+'...':'✦ '+ts+'...'}
-if(ts<=3&&ts>0&&!ls.classList.contains('final')){ls.classList.add('final');oI=7;for(var k=0;k<2;k++){var fo=new Orb();fo.ba=.055;orbs.push(fo)}}
-if(d===0&&h>0&&ts>300)st.textContent='Hoy — '+h+'h '+m+'m';if(d===1)st.textContent='Mañana es el día'}
-tick();setInterval(tick,1000);
-if(Date.now()>=ud){done=true;ls.style.display='none'}
+/* ALBUM MODAL */
+var albumModal=document.getElementById('albumModal');
+var albumMasonry=document.getElementById('albumMasonry');
+var captions=['Nuestro primer momento','Tu sonrisa perfecta','Mi lugar favorito','Risas sin parar','Momentos únicos','Para siempre contigo','Tú y yo','El inicio de todo','Algo especial','Juntos al fin','Recuerdos bonitos','Mi persona favorita','Cada día mejor','Te amo así','Nuestro mundo','La mejor vista','Contigo siempre','Mi corazón es tuyo','Perfecta','Un día increíble','Nuestra historia','Sin ti no soy nada','El amor de mi vida','Marah y yo','Mi felicidad','Cada momento contigo','Amor infinito','Mi todo','Siempre juntos','Por siempre'];
+function createAlbum(){
+albumMasonry.innerHTML='';
+for(var i=1;i<=30;i++){
+var item=document.createElement('div');
+item.className='album-masonry-item';
+item.innerHTML='<img src="foto'+i+'.jpeg" loading="lazy"><div class="album-item-overlay"><div class="album-item-num">'+i+' / 30</div><div class="album-item-caption">'+captions[i-1]+'</div></div>';
+albumMasonry.appendChild(item);
+item.addEventListener('click',function(){var img=this.querySelector('img');if(img){document.getElementById('lbxI').src=img.src;document.getElementById('lbx').classList.add('on')}});
+}}
+document.getElementById('openAlbum').addEventListener('click',function(){
+albumModal.classList.add('on');document.body.style.overflow='hidden';
+createAlbum();
+setTimeout(function(){document.querySelectorAll('.album-masonry-item').forEach(function(item,i){setTimeout(function(){item.classList.add('show')},i*30)})},100);
+});
+document.getElementById('closeAlbum').addEventListener('click',function(){albumModal.classList.remove('on');document.body.style.overflow=''});
+document.querySelector('.album-modal-bg').addEventListener('click',function(){albumModal.classList.remove('on');document.body.style.overflow=''});
+
+/* REALISTIC FLOATING LANTERNS for letter section */
+var llc=document.getElementById('letterLanternCanvas');
+var llx=llc.getContext('2d');
+var letterLanterns=[];
+var llActive=false;
+
+function resizeLLC(){
+var sec=document.getElementById('letterSection');
+if(sec){llc.width=sec.offsetWidth;llc.height=sec.offsetHeight}
+}
+resizeLLC();
+addEventListener('resize',resizeLLC);
+
+function RealLantern(w,h,isModal){
+this.x=Math.random()*w;
+this.y=h+30+Math.random()*80;
+this.sz=isModal?(8+Math.random()*16):(10+Math.random()*14);
+this.vy=-.12-Math.random()*.28;
+this.vx=(Math.random()-.5)*.15;
+this.wobble=Math.random()*Math.PI*2;
+this.wobbleSpeed=.005+Math.random()*.01;
+this.wobbleAmp=.2+Math.random()*.4;
+this.alpha=0;
+this.maxAlpha=isModal?(.12+Math.random()*.2):(.15+Math.random()*.25);
+this.fadeIn=true;
+this.flickerPhase=Math.random()*Math.PI*2;
+this.flickerSpeed=.03+Math.random()*.04;
+this.flickerPhase2=Math.random()*Math.PI*2;
+this.rot=0;
+this.rotSpeed=(Math.random()-.5)*.003;
+this.cW=w;
+this.cH=h;
+this.hue=25+Math.random()*20;
+this.sat=80+Math.random()*20;
+}
+RealLantern.prototype.update=function(){
+this.wobble+=this.wobbleSpeed;
+this.flickerPhase+=this.flickerSpeed;
+this.flickerPhase2+=this.flickerSpeed*1.7;
+this.x+=this.vx+Math.sin(this.wobble)*this.wobbleAmp;
+this.y+=this.vy;
+this.rot+=this.rotSpeed+Math.sin(this.wobble)*.001;
+if(this.fadeIn){this.alpha+=.0015;if(this.alpha>=this.maxAlpha){this.alpha=this.maxAlpha;this.fadeIn=false}}
+if(this.y<-this.sz*4){this.y=this.cH+30+Math.random()*60;this.x=Math.random()*this.cW;this.alpha=0;this.fadeIn=true}
+};
+RealLantern.prototype.draw=function(ctx){
+var s=this.sz;
+var flicker=.7+Math.sin(this.flickerPhase)*.15+Math.sin(this.flickerPhase2)*.1;
+var warmR=Math.floor(255*flicker);
+var warmG=Math.floor(180*flicker);
+var warmB=Math.floor(60*flicker);
+ctx.save();
+ctx.translate(this.x,this.y);
+ctx.rotate(this.rot);
+ctx.globalAlpha=this.alpha;
+// Outer ambient glow
+var g4=ctx.createRadialGradient(0,0,0,0,0,s*5);
+g4.addColorStop(0,'rgba('+warmR+','+warmG+','+warmB+','+(0.04*flicker)+')');
+g4.addColorStop(.4,'rgba('+warmR+','+warmG+','+warmB+','+(0.015*flicker)+')');
+g4.addColorStop(1,'rgba('+warmR+','+warmG+','+warmB+',0)');
+ctx.fillStyle=g4;
+ctx.beginPath();
+ctx.arc(0,0,s*5,0,Math.PI*2);
+ctx.fill();
+// Medium glow
+var g3=ctx.createRadialGradient(0,0,s*.3,0,0,s*2.5);
+g3.addColorStop(0,'rgba(255,220,100,'+(0.12*flicker)+')');
+g3.addColorStop(.5,'rgba(255,180,50,'+(0.04*flicker)+')');
+g3.addColorStop(1,'rgba(255,150,30,0)');
+ctx.fillStyle=g3;
+ctx.beginPath();
+ctx.arc(0,0,s*2.5,0,Math.PI*2);
+ctx.fill();
+// Lantern body (rounded rectangle shape like real sky lantern)
+var bw=s*.8,bh=s*1.2;
+ctx.beginPath();
+ctx.moveTo(-bw/2,-bh*.4);
+ctx.bezierCurveTo(-bw*.55,-bh*.5,-bw*.5,-bh*.5,0,-bh*.52);
+ctx.bezierCurveTo(bw*.5,-bh*.5,bw*.55,-bh*.5,bw/2,-bh*.4);
+ctx.bezierCurveTo(bw*.6,0,bw*.55,bh*.35,bw*.3,bh*.5);
+ctx.lineTo(-bw*.3,bh*.5);
+ctx.bezierCurveTo(-bw*.55,bh*.35,-bw*.6,0,-bw/2,-bh*.4);
+ctx.closePath();
+// Paper body gradient
+var bg=ctx.createLinearGradient(0,-bh*.5,0,bh*.5);
+bg.addColorStop(0,'rgba(255,230,160,'+(0.7*flicker)+')');
+bg.addColorStop(.3,'rgba(255,200,100,'+(0.85*flicker)+')');
+bg.addColorStop(.6,'rgba(240,170,60,'+(0.75*flicker)+')');
+bg.addColorStop(1,'rgba(200,130,40,'+(0.5*flicker)+')');
+ctx.fillStyle=bg;
+ctx.fill();
+// Paper texture lines
+ctx.strokeStyle='rgba(180,120,30,'+(0.08*flicker)+')';
+ctx.lineWidth=.3;
+for(var i=-2;i<=2;i++){
+ctx.beginPath();
+ctx.moveTo(-bw*.35,-bh*.3+i*bh*.15);
+ctx.lineTo(bw*.35,-bh*.3+i*bh*.15);
+ctx.stroke();
+}
+// Inner flame glow through the paper
+var fg=ctx.createRadialGradient(0,-bh*.05,0,0,-bh*.05,s*.5);
+fg.addColorStop(0,'rgba(255,255,200,'+(0.4*flicker)+')');
+fg.addColorStop(.3,'rgba(255,220,100,'+(0.2*flicker)+')');
+fg.addColorStop(1,'rgba(255,180,50,0)');
+ctx.fillStyle=fg;
+ctx.beginPath();
+ctx.arc(0,-bh*.05,s*.5,0,Math.PI*2);
+ctx.fill();
+// Flame inside (visible through paper)
+var fh=s*.25*flicker;
+ctx.beginPath();
+ctx.moveTo(0,bh*.15);
+ctx.bezierCurveTo(-s*.08,bh*.15-fh*.3,-s*.05,bh*.15-fh*.7,0,bh*.15-fh);
+ctx.bezierCurveTo(s*.05,bh*.15-fh*.7,s*.08,bh*.15-fh*.3,0,bh*.15);
+ctx.fillStyle='rgba(255,240,180,'+(0.6*flicker)+')';
+ctx.fill();
+// Small bright flame core
+ctx.beginPath();
+ctx.moveTo(0,bh*.15);
+ctx.bezierCurveTo(-s*.03,bh*.15-fh*.2,-s*.02,bh*.15-fh*.5,0,bh*.15-fh*.7);
+ctx.bezierCurveTo(s*.02,bh*.15-fh*.5,s*.03,bh*.15-fh*.2,0,bh*.15);
+ctx.fillStyle='rgba(255,255,220,'+(0.8*flicker)+')';
+ctx.fill();
+// Top ring/opening of the lantern
+ctx.beginPath();
+ctx.ellipse(0,-bh*.52,bw*.28,s*.08,0,0,Math.PI*2);
+ctx.strokeStyle='rgba(200,150,60,'+(0.25*flicker)+')';
+ctx.lineWidth=.5;
+ctx.stroke();
+// Bottom opening
+ctx.beginPath();
+ctx.ellipse(0,bh*.5,bw*.2,s*.06,0,0,Math.PI*2);
+ctx.strokeStyle='rgba(180,120,40,'+(0.2*flicker)+')';
+ctx.lineWidth=.4;
+ctx.stroke();
+// String/wire at bottom
+ctx.beginPath();
+ctx.moveTo(-bw*.12,bh*.5);
+ctx.lineTo(0,bh*.62);
+ctx.lineTo(bw*.12,bh*.5);
+ctx.strokeStyle='rgba(160,100,30,'+(0.15*flicker)+')';
+ctx.lineWidth=.3;
+ctx.stroke();
+ctx.restore();
+};
+
+function initLetterLanterns(){
+if(llActive)return;
+llActive=true;
+resizeLLC();
+letterLanterns=[];
+var count=innerWidth<500?10:18;
+for(var i=0;i<count;i++){
+var l=new RealLantern(llc.width,llc.height,false);
+l.y=Math.random()*llc.height;
+l.alpha=Math.random()*l.maxAlpha;
+l.fadeIn=false;
+letterLanterns.push(l);
+}
+animateLetterLanterns();
+}
+
+function animateLetterLanterns(){
+llx.clearRect(0,0,llc.width,llc.height);
+letterLanterns.forEach(function(l){l.update();l.draw(llx)});
+requestAnimationFrame(animateLetterLanterns);
+}
+
+var llObs=new IntersectionObserver(function(entries){
+entries.forEach(function(entry){if(entry.isIntersecting)initLetterLanterns()});
+},{threshold:0.1});
+var letterSec=document.getElementById('letterSection');
+if(letterSec)llObs.observe(letterSec);
+
+/* LETTER MODAL REALISTIC LANTERNS */
+var lmc=document.getElementById('letterModalCanvas');
+var lmx=lmc.getContext('2d');
+var modalLanterns=[];
+var modalLActive=false;
+
+function resizeLMC(){lmc.width=innerWidth;lmc.height=innerHeight}
+resizeLMC();
+addEventListener('resize',resizeLMC);
+
+function startModalLanterns(){
+if(modalLActive)return;
+modalLActive=true;
+resizeLMC();
+modalLanterns=[];
+var count=innerWidth<500?12:25;
+for(var i=0;i<count;i++){
+var l=new RealLantern(innerWidth,innerHeight,true);
+l.y=Math.random()*innerHeight;
+l.alpha=Math.random()*l.maxAlpha*.4;
+l.fadeIn=true;
+modalLanterns.push(l);
+}
+animateModalLanterns();
+}
+function stopModalLanterns(){modalLActive=false;modalLanterns=[];lmx.clearRect(0,0,lmc.width,lmc.height)}
+function animateModalLanterns(){
+if(!modalLActive)return;
+lmx.clearRect(0,0,lmc.width,lmc.height);
+modalLanterns.forEach(function(l){l.update();l.draw(lmx)});
+requestAnimationFrame(animateModalLanterns);
+}
 
 /* App */
 var pre=document.getElementById('pre'),vol=document.getElementById('vol'),go=document.getElementById('go'),mn=document.getElementById('mn'),mp=document.getElementById('mp'),au=document.getElementById('au'),mb=document.getElementById('mbtn'),piI=document.getElementById('pi'),paI=document.getElementById('pai'),bars=document.getElementById('bars'),pl=false,cv=document.getElementById('pc'),pcx=cv.getContext('2d'),pts=[],pOn=false;
@@ -596,7 +1370,7 @@ go.addEventListener('click',function(){vol.classList.add('out');mn.classList.add
 function uM(){piI.style.display=pl?'none':'block';paI.style.display=pl?'block':'none';bars.classList.toggle('on',pl)}
 mb.addEventListener('click',function(){if(pl){au.pause();pl=false}else au.play().then(function(){pl=true;uM()});uM()});
 function rC(){cv.width=innerWidth;cv.height=innerHeight}addEventListener('resize',rC);rC();
-function P(init){this.x=Math.random()*cv.width;this.y=init?Math.random()*cv.height:-15-Math.random()*50;this.s=3+Math.random()*10;this.vy=.15+Math.random()*.5;this.vx=-.15+Math.random()*.3;this.r=Math.random()*Math.PI*2;this.rv=-.008+Math.random()*.016;this.o=.03+Math.random()*.1;this.sa=.2+Math.random()*.8;this.ss=.004+Math.random()*.008;this.sp=Math.random()*Math.PI*2;var c=['#E8A0BF','#F2C4CE','#D4606E','#C9928E','#e6b8c9'];this.c=c[Math.floor(Math.random()*c.length)]}
+function P(init){this.x=Math.random()*cv.width;this.y=init?Math.random()*cv.height:-15-Math.random()*50;this.s=3+Math.random()*10;this.vy=.15+Math.random()*.5;this.vx=-.15+Math.random()*.3;this.r=Math.random()*Math.PI*2;this.rv=-.008+Math.random()*.016;this.o=.03+Math.random()*.1;this.sa=.2+Math.random()*.8;this.ss=.004+Math.random()*.008;this.sp=Math.random()*Math.PI*2;var c=['#E8A0BF','#F2C4CE','#D4606E','#C9928E','#B8A0D4','#C9A96E'];this.c=c[Math.floor(Math.random()*c.length)]}
 P.prototype.u=function(){this.y+=this.vy;this.sp+=this.ss;this.x+=this.vx+Math.sin(this.sp)*this.sa*.15;this.r+=this.rv;if(this.y>cv.height+15){this.x=Math.random()*cv.width;this.y=-10-Math.random()*30}};
 P.prototype.d=function(){pcx.save();pcx.translate(this.x,this.y);pcx.rotate(this.r);pcx.globalAlpha=this.o;pcx.beginPath();pcx.moveTo(0,-this.s*.5);pcx.bezierCurveTo(this.s*.38,-this.s*.28,this.s*.38,this.s*.28,0,this.s*.5);pcx.bezierCurveTo(-this.s*.38,this.s*.28,-this.s*.38,-this.s*.28,0,-this.s*.5);pcx.fillStyle=this.c;pcx.fill();pcx.restore()};
 function iP(){if(pOn)return;pOn=true;for(var i=0;i<(innerWidth<500?8:16);i++)pts.push(new P(true));aP()}
@@ -604,17 +1378,15 @@ function aP(){pcx.clearRect(0,0,cv.width,cv.height);pts.forEach(function(p){p.u(
 var ro=new IntersectionObserver(function(e){e.forEach(function(n){if(n.isIntersecting)n.target.classList.add('vis')})},{threshold:.12});
 document.querySelectorAll('.rv,.tli').forEach(function(el){ro.observe(el)});
 var m1=document.getElementById('m1'),m2=document.getElementById('m2'),m3=document.getElementById('m3');
-addEventListener('scroll',function(){requestAnimationFrame(function(){var s=-scrollY*.07;if(m1)m1.style.transform='translateX('+s+'px)';if(m2)m2.style.transform='translateX('+s+'px)';if(m3)m3.style.transform='translateX('+s+'px)'})}); document.querySelectorAll('.gi').forEach(function(g){g.addEventListener('click',function(){var img=g.querySelector('img');if(img){document.getElementById('lbxI').src=img.src;document.getElementById('lbx').classList.add('on')}})});
+addEventListener('scroll',function(){requestAnimationFrame(function(){var s=-scrollY*.07;if(m1)m1.style.transform='translateX('+s+'px)';if(m2)m2.style.transform='translateX('+s+'px)';if(m3)m3.style.transform='translateX('+s+'px)'})}); 
+document.querySelectorAll('.gi').forEach(function(g){g.addEventListener('click',function(){var img=g.querySelector('img');if(img){document.getElementById('lbxI').src=img.src;document.getElementById('lbx').classList.add('on')}})});
 document.getElementById('lbx').addEventListener('click',function(){this.classList.remove('on')});
 document.getElementById('lbxC').addEventListener('click',function(e){e.stopPropagation();document.getElementById('lbx').classList.remove('on')});
-
-/* Letter */
 var lm=document.getElementById('lm'),lmOpen=false;
-document.getElementById('envB').addEventListener('click',function(){if(lmOpen)return;lmOpen=true;lm.classList.add('on');setTimeout(function(){document.querySelectorAll('.lm-body p').forEach(function(p,i){setTimeout(function(){p.classList.add('vis')},i*90)})},500)});
-function closeLetter(){lm.classList.remove('on');setTimeout(function(){lmOpen=false;document.querySelectorAll('.lm-body p').forEach(function(p){p.classList.remove('vis')})},700)}
+document.getElementById('envB').addEventListener('click',function(){if(lmOpen)return;lmOpen=true;lm.classList.add('on');startModalLanterns();setTimeout(function(){document.querySelectorAll('.lm-body p').forEach(function(p,i){setTimeout(function(){p.classList.add('vis')},i*90)})},500)});
+function closeLetter(){lm.classList.remove('on');stopModalLanterns();setTimeout(function(){lmOpen=false;document.querySelectorAll('.lm-body p').forEach(function(p){p.classList.remove('vis')})},700)}
 document.getElementById('lmX').addEventListener('click',closeLetter);
 document.getElementById('lmBg').addEventListener('click',closeLetter);
-
 var str=document.getElementById('str');if(str)str.innerHTML+=str.innerHTML;
 var vV=document.getElementById('vfV'),vB=document.getElementById('vfB'),vT=document.getElementById('vfT'),vO=document.getElementById('vfO'),vPB=document.getElementById('vfPB'),vC=document.getElementById('vfC');
 function fT(s){return Math.floor(s/60)+':'+(Math.floor(s%60)<10?'0':'')+Math.floor(s%60)}
@@ -624,8 +1396,7 @@ vC.addEventListener('click',function(){if(!vV.paused){vV.pause();vB.classList.re
 vV.addEventListener('timeupdate',function(){vT.textContent=fT(vV.currentTime)+' / '+fT(vV.duration)});
 vV.addEventListener('loadedmetadata',function(){vT.textContent='0:00 / '+fT(vV.duration)});
 var fR=new Date('March 27, 2026 00:00:00').getTime();
-var fR=new Date('March 27, 2026 00:00:00').getTime();
-function uR(){var n=Date.now(),d=fR-n;if(d<0)d=0;var days=Math.floor(d/864e5);document.getElementById('rD').textContent=days}uR();setInterval(uR,1000);
+function uR(){var n=Date.now(),d=fR-n;if(d<0)d=0;document.getElementById('rD').textContent=Math.floor(d/864e5)}uR();setInterval(uR,1000);
 function uC(){var n=Date.now(),d=fR-n;if(d<0){document.getElementById('cD').textContent='0';document.getElementById('cH').textContent='00';document.getElementById('cM').textContent='00';document.getElementById('cS').textContent='00';return}var dd=Math.floor(d/864e5),hh=Math.floor((d%864e5)/36e5),mm=Math.floor((d%36e5)/6e4),ss=Math.floor((d%6e4)/1e3);document.getElementById('cD').textContent=dd;document.getElementById('cH').textContent=hh<10?'0'+hh:hh;document.getElementById('cM').textContent=mm<10?'0'+mm:mm;document.getElementById('cS').textContent=ss<10?'0'+ss:ss}uC();setInterval(uC,1000);
 })();
 </script>
